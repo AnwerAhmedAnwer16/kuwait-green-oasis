@@ -1,24 +1,76 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    
+    <!-- SEO Meta Tags - [عدّل حسب بياناتك] -->
+    <title>تنسيق حدائق الكويت | تصميم وتنفيذ وصيانة الحدائق</title>
+    <meta name="description" content="أفضل شركة تنسيق حدائق في الكويت. نقدم خدمات تصميم الحدائق، العشب الصناعي، أنظمة الري، البرجولات، إضاءة الحدائق والصيانة الدورية. اتصل الآن للحصول على استشارة مجانية." />
+    <meta name="keywords" content="تنسيق حدائق الكويت, تصميم حدائق, عشب صناعي الكويت, أنظمة ري, برجولات, إضاءة حدائق, صيانة حدائق" />
+    <meta name="author" content="اسم الشركة" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:locale" content="ar_KW" />
+    <meta property="og:title" content="تنسيق حدائق الكويت | خبراء تصميم وتنفيذ الحدائق" />
+    <meta property="og:description" content="أفضل شركة تنسيق حدائق في الكويت. تصميم، تنفيذ، وصيانة الحدائق بأعلى جودة وأفضل الأسعار." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- LocalBusiness Schema - [أضف بياناتك الفعلية] -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://example.com",
+      "name": "اسم الشركة",
+      "description": "شركة متخصصة في تنسيق وتصميم الحدائق في الكويت",
+      "url": "https://example.com",
+      "telephone": "+965-XXXX-XXXX",
+      "email": "info@example.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "العنوان",
+        "addressLocality": "الكويت",
+        "addressRegion": "الكويت",
+        "addressCountry": "KW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.3759",
+        "longitude": "47.9774"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$",
+      "image": "/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/yourcompany",
+        "https://www.facebook.com/yourcompany"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "الكويت"
+      },
+      "serviceType": ["تنسيق حدائق", "تصميم حدائق", "عشب صناعي", "أنظمة ري", "صيانة حدائق"]
+    }
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
