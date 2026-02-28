@@ -24,7 +24,7 @@ const articles = [
     title: "أفضل 10 نباتات تتحمل حرارة الكويت",
     excerpt: "تعرف على أفضل النباتات التي تتحمل درجات الحرارة العالية في الكويت وكيفية العناية بها للحصول على حديقة خضراء طوال العام.",
     content: `
-      <p>يواجه أصحاب الحدائق في الكويت تحدياً كبيراً في اختيار النباتات المناسبة التي تتحمل درجات الحرارة المرتفعة التي قد تصل إلى 50 درجة مئوية في الصيف.</p>
+      <p>يواجه أصحاب الحدائق في الكويت تحدياً كبيراً في اختيار النباتات المناسبة التي تتحمل درجات الحرارة المرتفعة التي قد تصل إلى 50 درجة مئوية في الصيف. من المهم دمج هذه النباتات ضمن <a href="/services#garden-design" class="text-primary hover:underline">تصميم حدائق</a> احترافي يضمن لها الظل والري المناسب.</p>
       
       <h2>1. نخيل الزينة</h2>
       <p>يعتبر نخيل الزينة من أفضل الخيارات للحدائق الكويتية. يتحمل الحرارة الشديدة ويضيف لمسة استوائية جميلة لحديقتك.</p>
@@ -46,12 +46,12 @@ const articles = [
         <li>ري النباتات في الصباح الباكر أو المساء</li>
         <li>استخدام المهاد لحفظ رطوبة التربة</li>
         <li>توفير ظل جزئي للنباتات الحساسة</li>
-        <li>استخدام أنظمة الري بالتنقيط لتوفير الماء</li>
+        <li>استخدام <a href="/services#irrigation" class="text-primary hover:underline">أنظمة الري بالتنقيط</a> لتوفير الماء</li>
       </ul>
     `,
     category: "plants",
     categoryName: "نباتات مناسبة للكويت",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
+    image: "/kg/gardens21.jpg",
     author: "فريق التحرير", // [عدّل اسم الكاتب]
     date: "2024-01-15",
     readTime: 5,
@@ -62,7 +62,7 @@ const articles = [
     title: "كيف توفر الماء مع أنظمة الري الذكية",
     excerpt: "دليل شامل لأنظمة الري الذكية وكيف يمكنها توفير حتى 70% من استهلاك الماء مع الحفاظ على صحة نباتاتك.",
     content: `
-      <p>في ظل ارتفاع أسعار المياه وأهمية الحفاظ على الموارد، أصبحت أنظمة الري الذكية ضرورة لكل حديقة في الكويت.</p>
+      <p>في ظل ارتفاع أسعار المياه وأهمية الحفاظ على الموارد، أصبحت <a href="/services#irrigation" class="text-primary hover:underline">أنظمة الري الذكية</a> ضرورة لكل حديقة في الكويت.</p>
       
       <h2>ما هو الري الذكي؟</h2>
       <p>أنظمة الري الذكية تستخدم أجهزة استشعار وتقنيات متقدمة لتوصيل كمية الماء المناسبة في الوقت المناسب.</p>
@@ -84,7 +84,7 @@ const articles = [
     `,
     category: "irrigation",
     categoryName: "نصائح الري",
-    image: "https://images.unsplash.com/photo-1564429238067-5f79bf6f3f23?w=800&q=80",
+    image: "/kg/483529366_17968829630839358_870485787341361304_n.webp",
     author: "فريق التحرير",
     date: "2024-01-10",
     readTime: 4,
@@ -95,17 +95,11 @@ const articles = [
     title: "دليل اختيار العشب الصناعي المناسب",
     excerpt: "كل ما تحتاج معرفته عن أنواع العشب الصناعي وكيفية اختيار النوع الأفضل لحديقتك في الكويت.",
     content: `
-      <p>العشب الصناعي حل مثالي للحدائق في الكويت حيث يوفر مظهراً أخضر طوال العام دون الحاجة للماء أو الصيانة المستمرة.</p>
+      <p><a href="/services#artificial-grass" class="text-primary hover:underline">العشب الصناعي</a> حل مثالي للحدائق في الكويت حيث يوفر مظهراً أخضر طوال العام دون الحاجة للماء أو الصيانة المستمرة.</p>
       
       <h2>أنواع العشب الصناعي</h2>
       <h3>1. العشب السكني</h3>
       <p>مثالي للحدائق المنزلية، ناعم ومريح للمشي.</p>
-      
-      <h3>2. العشب الرياضي</h3>
-      <p>مصمم لتحمل الاستخدام الكثيف في الملاعب.</p>
-      
-      <h3>3. العشب التزييني</h3>
-      <p>للمساحات الصغيرة والديكور الداخلي.</p>
       
       <h2>معايير الجودة</h2>
       <ul>
@@ -117,7 +111,7 @@ const articles = [
     `,
     category: "maintenance",
     categoryName: "صيانة الحدائق",
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80",
+    image: "/kg/gardens1.jpg",
     author: "فريق التحرير",
     date: "2024-01-05",
     readTime: 6,
@@ -128,7 +122,7 @@ const articles = [
     title: "أفكار إبداعية لتصميم الحدائق الصغيرة",
     excerpt: "استغل كل شبر في حديقتك الصغيرة مع هذه الأفكار الإبداعية للتصميم والتنسيق.",
     content: `
-      <p>لا تدع صغر المساحة يمنعك من الحصول على حديقة جميلة. إليك أفكار إبداعية لتحويل أي مساحة صغيرة إلى واحة خضراء.</p>
+      <p>لا تدع صغر المساحة يمنعك من الحصول على حديقة جميلة. إليك أفكار إبداعية لـ <a href="/services#garden-design" class="text-primary hover:underline">تصميم الحدائق الصغيرة</a> وتحويل أي مساحة إلى واحة خضراء.</p>
       
       <h2>1. الحدائق العمودية</h2>
       <p>استغل الجدران لزراعة النباتات عمودياً وتوفير المساحة الأرضية.</p>
@@ -144,7 +138,7 @@ const articles = [
     `,
     category: "design",
     categoryName: "أفكار التصميم",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80",
+    image: "/kg/gardens.jpg",
     author: "فريق التحرير",
     date: "2024-01-01",
     readTime: 4,
@@ -155,7 +149,7 @@ const articles = [
     title: "أنواع البرجولات وكيفية اختيار الأنسب لحديقتك",
     excerpt: "تعرف على أنواع البرجولات المختلفة ومميزات كل نوع لاختيار الأفضل لمساحتك الخارجية.",
     content: `
-      <p>البرجولات تضيف لمسة فاخرة لأي حديقة وتوفر ظلاً مريحاً للاستمتاع بالأجواء الخارجية.</p>
+      <p><a href="/services#pergolas" class="text-primary hover:underline">البرجولات</a> تضيف لمسة فاخرة لأي حديقة وتوفر ظلاً مريحاً للاستمتاع بالأجواء الخارجية في الكويت.</p>
       
       <h2>أنواع البرجولات</h2>
       <h3>1. البرجولات الخشبية</h3>
@@ -169,7 +163,7 @@ const articles = [
     `,
     category: "design",
     categoryName: "أفكار التصميم",
-    image: "https://images.unsplash.com/photo-1598902108854-10e335adac99?w=800&q=80",
+    image: "/kg/woody_setting.jpg",
     author: "فريق التحرير",
     date: "2023-12-28",
     readTime: 5,
@@ -180,7 +174,7 @@ const articles = [
     title: "نصائح لإضاءة حديقتك بشكل احترافي",
     excerpt: "تعلم كيف تضيء حديقتك بطريقة تبرز جمالها وتخلق أجواء ساحرة في الليل.",
     content: `
-      <p>الإضاءة الصحيحة تحول حديقتك العادية إلى لوحة فنية ليلية وتمدد وقت استمتاعك بالمساحات الخارجية.</p>
+      <p><a href="/services#lighting" class="text-primary hover:underline">إضاءة الحدائق</a> الصحيحة تحول حديقتك العادية إلى لوحة فنية ليلية وتمدد وقت استمتاعك بالمساحات الخارجية.</p>
       
       <h2>أنواع الإضاءة</h2>
       <h3>1. الإضاءة المحيطية</h3>
@@ -194,7 +188,7 @@ const articles = [
     `,
     category: "design",
     categoryName: "أفكار التصميم",
-    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+    image: "/kg/lightings.jpg",
     author: "فريق التحرير",
     date: "2023-12-25",
     readTime: 4,
@@ -212,12 +206,38 @@ const BlogList = () => {
   return (
     <>
       <Helmet>
-        <title>مدونة تنسيق الحدائق | نصائح ومقالات عن الحدائق في الكويت</title>
+        <title>مدونة كويتي جاردنز | نصائح وأفكار لتنسيق الحدائق في الكويت</title>
         <meta
           name="description"
-          content="مقالات ونصائح متخصصة في تنسيق الحدائق. أفكار تصميم، نباتات مناسبة للكويت، نصائح الري والصيانة. اقرأ وتعلم من خبراء الحدائق."
+          content="اكتشف أحدث الأفكار والنصائح للعناية بحديقتك، اختيار أفضل أنواع الثيل الصناعي، وتصاميم الجلسات الخارجية المناسبة لمناخ الكويت."
         />
-        <link rel="canonical" href="https://example.com/blog" />
+        <meta name="keywords" content="تنسيق حدائق الكويت, تصميم حدائق, عشب صناعي الكويت, أنظمة ري, برجولات, إضاءة حدائق, صيانة حدائق, نصائح زراعية" />
+        <meta property="og:title" content="مدونة كويتي جاردنز | نصائح وأفكار لتنسيق الحدائق في الكويت" />
+        <meta property="og:description" content="اكتشف أحدث الأفكار والنصائح للعناية بحديقتك، اختيار أفضل أنواع الثيل الصناعي، وتصاميم الجلسات الخارجية المناسبة لمناخ الكويت." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/kg/gardens21.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://kuwaitigardens.com/blog" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://kuwaitigardens.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "المدونة",
+                "item": "https://kuwaitigardens.com/blog"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Layout>
@@ -225,7 +245,7 @@ const BlogList = () => {
         <section className="bg-foreground py-20 px-4">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              مدونة تنسيق الحدائق
+              مدونة كويتي جاردنز - نصائح وأفكار لتنسيق الحدائق
             </h1>
             <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
               نصائح، أفكار، ومقالات متخصصة في عالم الحدائق
@@ -241,11 +261,10 @@ const BlogList = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                    activeCategory === cat.id
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-background text-foreground hover:bg-primary/10"
-                  }`}
+                  className={`px-4 py-2 rounded-full font-medium transition-colors ${activeCategory === cat.id
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-background text-foreground hover:bg-primary/10"
+                    }`}
                 >
                   {cat.name}
                 </button>
@@ -336,27 +355,63 @@ const ArticleDetail = () => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "اسم الشركة", // [أضف اسم الشركة]
+      "name": "كويتي جاردنز",
       "logo": {
         "@type": "ImageObject",
         "url": "/logo.png"
       }
     },
     "datePublished": article.date,
+    "dateModified": article.date,
+    "keywords": `${article.title}, تنسيق حدائق الكويت, ${article.categoryName}`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://example.com/blog/${article.slug}`
+      "@id": `https://kuwaitigardens.com/blog/${article.slug}`
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://kuwaitigardens.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "المدونة",
+        "item": "https://kuwaitigardens.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": `https://kuwaitigardens.com/blog/${article.slug}`
+      }
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>{article.title} | مدونة تنسيق الحدائق</title>
+        <title>{article.title} | مدونة كويتي جاردنز</title>
         <meta name="description" content={article.excerpt} />
-        <link rel="canonical" href={`https://example.com/blog/${article.slug}`} />
+        <meta name="keywords" content={`${article.title}, تنسيق حدائق الكويت, ${article.categoryName}`} />
+        <meta property="og:title" content={`${article.title} | مدونة كويتي جاردنز`} />
+        <meta property="og:description" content={article.excerpt} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={article.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={`https://kuwaitigardens.com/blog/${article.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 
@@ -401,8 +456,9 @@ const ArticleDetail = () => {
             <div className="aspect-video rounded-xl overflow-hidden mb-8">
               <img
                 src={article.image}
-                alt={article.title}
+                alt={`${article.title} - كويتي جاردنز لتنسيق الحدائق في الكويت`}
                 className="w-full h-full object-cover"
+                loading="eager"
               />
             </div>
 
@@ -417,6 +473,9 @@ const ArticleDetail = () => {
               <h3 className="text-xl font-bold text-foreground mb-4 text-center">
                 هل تحتاج مساعدة في حديقتك؟
               </h3>
+              <p className="text-center mb-6 text-muted-foreground">
+                اكتشف <Link to="/services" className="text-primary font-bold hover:underline">خدمات تنسيق الحدائق</Link> المتكاملة التي نقدمها في الكويت.
+              </p>
               <ContactForm variant="compact" />
             </div>
 
@@ -456,11 +515,11 @@ const ArticleDetail = () => {
 // Main Blog Component - decides which view to render
 const Blog = () => {
   const { slug } = useParams();
-  
+
   if (slug) {
     return <ArticleDetail />;
   }
-  
+
   return <BlogList />;
 };
 

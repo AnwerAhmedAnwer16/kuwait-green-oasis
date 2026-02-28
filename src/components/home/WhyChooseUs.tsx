@@ -42,11 +42,11 @@ const WhyChooseUs = () => {
           <div>
             <span className="text-primary font-semibold text-lg mb-2 block">لماذا نحن</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              لماذا تختارنا؟
+              لماذا تختار كويتي جاردنز لتنسيق حديقتك؟
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               {/* [عدّل الوصف حسب شركتك] */}
-              نحن نؤمن بأن كل حديقة تستحق أن تكون تحفة فنية. نجمع بين الخبرة الطويلة 
+              نحن نؤمن بأن كل حديقة تستحق أن تكون تحفة فنية. نجمع بين الخبرة الطويلة
               والتقنيات الحديثة لنقدم لك أفضل خدمات تنسيق الحدائق في الكويت.
             </p>
 
@@ -69,8 +69,8 @@ const WhyChooseUs = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
-                alt="حديقة منزلية في الكويت - تنسيق حدائق احترافي"
+                src="/kg/gardens21.jpg"
+                alt="حديقة منزلية في الكويت - تنسيق حدائق احترافي كويتي جاردنز"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

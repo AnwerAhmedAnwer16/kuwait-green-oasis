@@ -2,13 +2,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToServices = () => {
+    const el = document.getElementById("services");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image - [استبدل بصورة خلفية حقيقية] */}
-      <div 
+      {/* Background Image */}
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80')`,
+          backgroundImage: `url('/kg/gardens4.jpg')`,
+          backgroundPosition: 'center center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-l from-foreground/95 via-foreground/80 to-foreground/60" />
@@ -24,14 +32,13 @@ const HeroSection = () => {
 
           {/* Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-            نحوّل مساحتك إلى
-            <span className="text-primary block mt-2">حديقة أحلامك</span>
+            كويتي جاردنز - ريادة في
+            <span className="text-primary block mt-2">تنسيق وتصميم الحدائق بالكويت</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed">
-            {/* [عدّل الوصف حسب شركتك] */}
-            نقدم خدمات تنسيق وتصميم الحدائق في الكويت بأعلى معايير الجودة. 
+            نقدم خدمات تنسيق وتصميم الحدائق في الكويت بأعلى معايير الجودة.
             من التصميم ثلاثي الأبعاد إلى التنفيذ والصيانة الدورية.
           </p>
 
@@ -43,7 +50,7 @@ const HeroSection = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-6 text-lg"
             >
               <a
-                href="https://wa.me/965XXXXXXXX" // [أضف رقم الواتساب]
+                href="https://wa.me/96566101619"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,20 +59,19 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button
-              asChild
               variant="outline"
               size="lg"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-bold px-8 py-6 text-lg"
+              onClick={scrollToServices}
+              className="border-2 border-white text-white bg-white/10 hover:bg-white hover:text-foreground font-bold px-8 py-6 text-lg cursor-pointer transition-all duration-300"
             >
-              <a href="#services">تصفح خدماتنا</a>
+              تصفح خدماتنا
             </Button>
           </div>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-8 mt-12">
-            {/* [عدّل الأرقام حسب بياناتك] */}
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary">+500</p>
+              <p className="text-3xl md:text-4xl font-bold text-primary">+100</p>
               <p className="text-primary-foreground/70">مشروع منجز</p>
             </div>
             <div>

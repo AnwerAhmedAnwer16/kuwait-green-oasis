@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const ContactSection = () => {
@@ -19,34 +19,23 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            {/* Info Cards - [أضف بيانات التواصل الحقيقية] */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Info Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <Phone className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-bold text-foreground mb-1">اتصل بنا</h3>
-                {/* [أضف رقم الهاتف] */}
-                <a href="tel:+965XXXXXXXX" className="text-muted-foreground hover:text-primary">
-                  +965-XXXX-XXXX
-                </a>
-              </div>
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <Mail className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold text-foreground mb-1">البريد الإلكتروني</h3>
-                {/* [أضف البريد الإلكتروني] */}
-                <a href="mailto:info@example.com" className="text-muted-foreground hover:text-primary">
-                  info@example.com
+                <a href="tel:+96566101619" className="text-muted-foreground hover:text-primary">
+                  +965 66101619
                 </a>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <MapPin className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-bold text-foreground mb-1">العنوان</h3>
-                {/* [أضف العنوان] */}
-                <p className="text-muted-foreground">الكويت، المنطقة، الشارع</p>
+                <p className="text-muted-foreground">الكويت</p>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <Clock className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-bold text-foreground mb-1">أوقات العمل</h3>
-                {/* [عدّل أوقات العمل] */}
                 <p className="text-muted-foreground">الأحد - الخميس: 8ص - 6م</p>
               </div>
             </div>

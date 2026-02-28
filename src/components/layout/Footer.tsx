@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { Leaf, Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
+
+const IG_URL = "https://www.instagram.com/tnsyq231/";
+
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -9,45 +17,24 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-primary-foreground" />
-              </div>
-              {/* [أضف اسم الشركة بالعربية] */}
-              <span className="font-bold text-xl">اسم الشركة</span>
+              <img src="/logo.png" alt="كويتي جاردنز" className="w-12 h-12 object-contain brightness-0 invert" />
+              <span className="font-bold text-xl">كويتي جاردنز</span>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               خبراء تنسيق الحدائق في الكويت. نقدم خدمات تصميم وتنفيذ وصيانة الحدائق بأعلى جودة وأفضل الأسعار.
             </p>
-            {/* Social Media - [أضف روابط التواصل الاجتماعي] */}
-            <div className="flex gap-3">
-              <a
-                href="#" // [أضف رابط فيسبوك]
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#" // [أضف رابط انستقرام]
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#" // [أضف رابط تويتر]
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
+            {/* Instagram */}
+            <a
+              href={IG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="inline-flex items-center gap-2 text-white text-sm font-bold px-4 py-2 rounded-full transition-opacity hover:opacity-90"
+              style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }}
+            >
+              <InstagramIcon />
+              إنستغرام
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -67,11 +54,6 @@ const Footer = () => {
               <li>
                 <Link to="/blog" className="text-primary-foreground/80 hover:text-primary transition-colors">
                   المدونة
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#portfolio" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  معرض الأعمال
                 </Link>
               </li>
             </ul>
@@ -121,29 +103,17 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  {/* [أضف رقم الهاتف] */}
-                  <a href="tel:+965XXXXXXXX" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                    +965-XXXX-XXXX
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  {/* [أضف البريد الإلكتروني] */}
-                  <a href="mailto:info@example.com" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                    info@example.com
+                  <a href="tel:+96566101619" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                    +965 66101619
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                {/* [أضف العنوان] */}
-                <span className="text-primary-foreground/80">الكويت، المنطقة، الشارع</span>
+                <span className="text-primary-foreground/80">الكويت</span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                {/* [عدّل أوقات العمل] */}
                 <span className="text-primary-foreground/80">الأحد - الخميس: 8ص - 6م</span>
               </li>
             </ul>
@@ -153,8 +123,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60">
-            {/* [عدّل حسب بياناتك] */}
-            © {new Date().getFullYear()} اسم الشركة. جميع الحقوق محفوظة.
+            © {new Date().getFullYear()} كويتي جاردنز. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>

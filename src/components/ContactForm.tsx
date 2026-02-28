@@ -14,8 +14,7 @@ const ContactForm = ({ variant = "default", className = "" }: ContactFormProps) 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // [أضف رقم الواتساب]
-  const whatsappNumber = "965XXXXXXXX";
+  const whatsappNumber = "96566101619";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,12 +35,12 @@ ${details}`;
 
     // Open WhatsApp with pre-filled message
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
+
     setTimeout(() => {
       window.open(whatsappUrl, "_blank");
       setIsSubmitting(false);
       setIsSubmitted(true);
-      
+
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
     }, 500);

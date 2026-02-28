@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { 
-  Palette, 
-  Leaf, 
-  Droplets, 
-  Tent, 
-  Lightbulb, 
+import {
+  Palette,
+  Leaf,
+  Droplets,
+  Tent,
+  Lightbulb,
   Wrench,
-  ArrowLeft 
+  ArrowLeft
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -57,7 +57,7 @@ const ServicesOverview = () => {
         <div className="text-center mb-12">
           <span className="text-primary font-semibold text-lg mb-2 block">ماذا نقدم</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            خدماتنا المتميزة
+            خدماتنا المتميزة في لاندسكيب الحدائق
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             نقدم مجموعة شاملة من خدمات تنسيق الحدائق لتلبية جميع احتياجاتك
