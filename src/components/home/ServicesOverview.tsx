@@ -6,7 +6,10 @@ import {
   Tent,
   Lightbulb,
   Wrench,
-  ArrowLeft
+  ArrowLeft,
+  TreePine,
+  Scissors,
+  Sprout
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -19,14 +22,14 @@ const services = [
   },
   {
     icon: Leaf,
-    title: "العشب الصناعي",
-    description: "عشب صناعي عالي الجودة يتحمل حرارة الكويت",
+    title: "الثيل الصناعي والطبيعي",
+    description: "ثيل عالي الجودة يتحمل حرارة الكويت",
     href: "/services#artificial-grass",
   },
   {
     icon: Droplets,
-    title: "أنظمة الري",
-    description: "أنظمة ري ذكية توفر الماء والجهد",
+    title: "شبكات الري",
+    description: "شبكات ري (عادي وأتوماتيك) توفر الماء والجهد",
     href: "/services#irrigation",
   },
   {
@@ -40,6 +43,24 @@ const services = [
     title: "إضاءة الحدائق",
     description: "إضاءة LED وشمسية لإبراز جمال حديقتك",
     href: "/services#lighting",
+  },
+  {
+    icon: Sprout,
+    title: "زرع الأشجار والنخيل",
+    description: "توريد وزراعة كافة أنواع الأشجار والنخيل التي تتناسب مع مناخ الكويت",
+    href: "/services#planting",
+  },
+  {
+    icon: TreePine,
+    title: "تلقيح وتكريب النخيل",
+    description: "خدمات احترافية في تلقيح النخيل وتكريبها وتنظيفها لزيادة جودة الإنتاج",
+    href: "/services#palm-care",
+  },
+  {
+    icon: Scissors,
+    title: "خلع وإزالة الأشجار",
+    description: "خلع وتقطيع الأشجار التالفة أو غير المرغوب بها بطرق آمنة واحترافية",
+    href: "/services#tree-removal",
   },
   {
     icon: Wrench,

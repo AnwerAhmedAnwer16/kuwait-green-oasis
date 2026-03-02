@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: [
+      "apterous-functionally-legend.ngrok-free.dev"
+    ],
     hmr: {
       overlay: false,
     },

@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="كويتي جاردنز" className="w-12 h-12 object-contain brightness-0 invert" />
+              <img src="/logo.png" alt="كويتي جاردنز" className="w-12 h-12 object-contain" />
               <span className="font-bold text-xl">كويتي جاردنز</span>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
@@ -70,12 +70,12 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services#artificial-grass" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  العشب الصناعي
+                  الثيل الصناعي
                 </Link>
               </li>
               <li>
                 <Link to="/services#irrigation" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  أنظمة الري
+                  شبكات الري
                 </Link>
               </li>
               <li>
@@ -91,6 +91,21 @@ const Footer = () => {
               <li>
                 <Link to="/services#maintenance" className="text-primary-foreground/80 hover:text-primary transition-colors">
                   الصيانة الدورية
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#planting" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  زرع الأشجار والنخيل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#palm-care" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  تلقيح وتكريب النخيل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services#tree-removal" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  خلع وإزالة الأشجار
                 </Link>
               </li>
             </ul>

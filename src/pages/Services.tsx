@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import {
   Palette, Leaf, Droplets, Tent, Lightbulb, Wrench,
-  CheckCircle, ArrowLeft,
+  CheckCircle, ArrowLeft, TreePine, Scissors, Sprout
 } from "lucide-react";
 
 // ── Real project photos from /public/kg ───────────────────────────────
@@ -32,6 +32,16 @@ const IMG_LIGHT_2 = "/kg/gardens222.jpg";  // wooden pergola with wall lights
 const IMG_MAINT_1 = "/kg/gardens22.jpg";   // artificial grass maintained entrance
 const IMG_MAINT_2 = "/kg/gardens2.jpg";    // pristine green turf maintenance
 
+// Trees & Palms
+const IMG_PLANT_1 = "/kg/gardens21.jpg";
+const IMG_PLANT_2 = "/kg/gardens.jpg";
+
+const IMG_PALM_1 = "/kg/gardens4.jpg";
+const IMG_PALM_2 = "/kg/gardens21.jpg";
+
+const IMG_REMOVE_1 = "/kg/gardens.jpg"; // Utilizing generic appropriate visuals for tree related text where explicit removal isn't present
+const IMG_REMOVE_2 = "/kg/gardens22.jpg";
+
 // Services data with full details
 const services = [
   {
@@ -57,9 +67,9 @@ const services = [
   {
     id: "artificial-grass",
     icon: Leaf,
-    title: "العشب الصناعي",
-    subtitle: "عشب عالي الجودة يتحمل الحرارة",
-    description: "نوفر أفضل أنواع العشب الصناعي المقاوم للحرارة والأشعة فوق البنفسجية. عشب يدوم لسنوات طويلة مع ضمان شامل.",
+    title: "الثيل الصناعي والطبيعي",
+    subtitle: "ثيل عالي الجودة يتحمل الحرارة",
+    description: "نوفر أفضل أنواع الثيل (العشب) الصناعي المقاوم للحرارة والأشعة فوق البنفسجية. ثيل يدوم لسنوات طويلة مع ضمان شامل.",
     benefits: [
       "مقاوم لحرارة الكويت الشديدة",
       "لا يحتاج ماء أو صيانة دورية",
@@ -69,7 +79,7 @@ const services = [
     process: [
       { step: 1, title: "القياس", desc: "قياس المساحة بدقة" },
       { step: 2, title: "التحضير", desc: "تجهيز الأرضية وتسويتها" },
-      { step: 3, title: "التركيب", desc: "تركيب العشب بإتقان" },
+      { step: 3, title: "التركيب", desc: "تركيب الثيل بإتقان" },
       { step: 4, title: "التسليم", desc: "فحص الجودة والتسليم" },
     ],
     images: [IMG_GRASS_1, IMG_GRASS_2],
@@ -77,9 +87,9 @@ const services = [
   {
     id: "irrigation",
     icon: Droplets,
-    title: "أنظمة الري",
-    subtitle: "ري ذكي يوفر الماء",
-    description: "نركب أحدث أنظمة الري الذكية بالتنقيط والرش. أنظمة موفرة للماء مع تحكم آلي وجدولة زمنية.",
+    title: "شبكات الري",
+    subtitle: "شبكات ري (عادي وأتوماتيك) توفر الماء",
+    description: "نركب أحدث شبكات الري العادية والأتوماتيكية بالتنقيط والرش. شبكات موفرة للماء مع تحكم آلي وجدولة زمنية.",
     benefits: [
       "توفير حتى 70% من استهلاك الماء",
       "تحكم آلي عبر التطبيق",
@@ -139,7 +149,7 @@ const services = [
     icon: Wrench,
     title: "الصيانة الدورية",
     subtitle: "باقات صيانة شهرية",
-    description: "نقدم باقات صيانة شهرية شاملة للحفاظ على جمال حديقتك. قص العشب، تقليم الأشجار، ومراقبة أنظمة الري.",
+    description: "نقدم باقات صيانة شهرية شاملة للحفاظ على جمال حديقتك. قص الثيل، تقليم الأشجار، ومراقبة أنظمة الري.",
     benefits: [
       "زيارات دورية منتظمة",
       "قص وتشذيب النباتات",
@@ -153,6 +163,63 @@ const services = [
     ],
     images: [IMG_MAINT_1, IMG_MAINT_2],
   },
+  {
+    id: "planting",
+    icon: Sprout,
+    title: "زرع الأشجار والنخيل",
+    subtitle: "مجموعة متنوعة تتناسب مع مناخ الكويت",
+    description: "نقدم خدمة توريد وزراعة كافة أنواع الأشجار والنخيل التي تتناسب مع درجات الحرارة والبيئة في الكويت. نضمن أفضل الأنواع الجاهزة للنمو والإثمار.",
+    benefits: [
+      "توريد أشجار ونخيل خالية من الأمراض",
+      "زراعة بطرق علمية تضمن نمو الجذور السليم",
+      "توفير بيئة تربة مناسبة وغنية بالمعادن",
+    ],
+    process: [
+      { step: 1, title: "الاختيار", desc: "اختيار الأشجار المناسبة للمساحة والجو" },
+      { step: 2, title: "التجهيز", desc: "تجهيز حفر الزراعة والتربة" },
+      { step: 3, title: "الزراعة", desc: "عملية الزراعة والتثبيت السليم" },
+      { step: 4, title: "المتابعة", desc: "الري الأولي والمتابعة للمناعة" },
+    ],
+    images: [IMG_PLANT_1, IMG_PLANT_2],
+  },
+  {
+    id: "palm-care",
+    icon: TreePine,
+    title: "تلقيح وتكريب النخيل",
+    subtitle: "لزيادة الإنتاج والمحافظة على النخلة",
+    description: "خدمات احترافية في العناية بالنخلة من مرحلة التلقيح (التنبيت) وحتى مرحلة التكريب (قص السعف اليابس وتكريب الجذع) لضمان بيئة نظيفة وثمار بجودة عالية.",
+    benefits: [
+      "تلقيح دقيق لضمان محصول وفي ومثمر",
+      "تكريب وتخليص النخلة من السعف الميت والآفات",
+      "تحسين المنظر الجمالي لجذع النخلة",
+    ],
+    process: [
+      { step: 1, title: "الفحص", desc: "فحص حالة النخلة والطلع" },
+      { step: 2, title: "التلقيح", desc: "عملية التلقيح في الوقت المناسب" },
+      { step: 3, title: "التكريب", desc: "قص السعف الجاف وتكريب الجذع" },
+      { step: 4, title: "التنظيف", desc: "إزالة المخلفات من الموقع" },
+    ],
+    images: [IMG_PALM_1, IMG_PALM_2],
+  },
+  {
+    id: "tree-removal",
+    icon: Scissors,
+    title: "خلع وإزالة الأشجار",
+    subtitle: "إزالة احترافية وآمنة للأشجار",
+    description: "إزالة וخلع الأشجار الميتة أو التي تتسبب بأضرار للمبنى والجدران بطرق آمنة ومدروسة دون التأثير على البيئة المحيطة أو التمديدات.",
+    benefits: [
+      "معدات متخصصة وآمنة لخلع الأشجار",
+      "دقة في العمل وتجنب التسبب بأضرار",
+      "تقطيع الشجرة وتخليص الموقع من المخلفات",
+    ],
+    process: [
+      { step: 1, title: "التقييم", desc: "تقييم الشجرة والمكان المحيط" },
+      { step: 2, title: "التقطيع", desc: "التدرج في الإزالة والتقطيع" },
+      { step: 3, title: "الخلع", desc: "خلع الجذور العميقة بأمان" },
+      { step: 4, title: "التنظيف", desc: "تسوية الأرضية وتنقيتها" },
+    ],
+    images: [IMG_REMOVE_1, IMG_REMOVE_2],
+  },
 ];
 
 const Services = () => {
@@ -162,14 +229,14 @@ const Services = () => {
         <title>خدماتنا | تنسيق حدائق، ثيل صناعي، وبرجولات - كويتي جاردنز</title>
         <meta
           name="description"
-          content="استعرض خدمات كويتي جاردنز المتكاملة: تصميم لاندسكيب، تركيب عشب صناعي، صيانة حدائق، وأنظمة ري حديثة. شاهد معرض أعمالنا في مختلف مناطق الكويت."
+          content="استعرض خدمات كويتي جاردنز المتكاملة: تصميم لاندسكيب، تركيب ثيل صناعي وطبيعي، شبكات ري، وزرع أشجار وتكريب وتلقيح النخيل وخلع الأشجار في الكويت."
         />
         <meta
           name="keywords"
-          content="خدمات تنسيق حدائق, تركيب ثيل صناعي الكويت, تصميم لاندسكيب, أنظمة ري حديثة, برجولات خشبية, صيانة حدائق منزلية"
+          content="خدمات تنسيق حدائق, تركيب ثيل صناعي الكويت, تصميم لاندسكيب, شبكات ري عادي وأتوماتيك, زرع أشجار الكويت, تلقيح نخيل, تكريب نخيل, تنظيف نخل, خلع أشجار, إزالة أشجار, صيانة حدائق منزلية"
         />
-        <meta property="og:title" content="خدماتنا | تنسيق حدائق، ثيل صناعي، وبرجولات - كويتي جاردنز" />
-        <meta property="og:description" content="استعرض خدمات كويتي جاردنز المتكاملة: تصميم لاندسكيب، تركيب عشب صناعي، صيانة حدائق، وأنظمة ري حديثة." />
+        <meta property="og:title" content="خدماتنا | تنسيق حدائق، ثيل صناعي، شبكات ري، وزرع وتكريب النخيل - كويتي جاردنز" />
+        <meta property="og:description" content="استعرض خدمات كويتي جاردنز المتكاملة: تصميم لاندسكيب، تركيب ثيل صناعي وطبيعي، شبكات ري (عادي وأتوماتيك)، وزرع وتكريب النخيل وإزالة الأشجار." />
         <meta property="og:image" content="/kg/gardens21.jpg" />
         <meta property="og:url" content="https://kuwaitigardens.com/services" />
         <meta property="og:type" content="website" />

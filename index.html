@@ -8,9 +8,9 @@
   <!-- SEO Meta Tags - [عدّل حسب بياناتك] -->
   <title>تنسيق حدائق الكويت | تصميم وتنفيذ وصيانة الحدائق</title>
   <meta name="description"
-    content="أفضل شركة تنسيق حدائق في الكويت. نقدم خدمات تصميم الحدائق، العشب الصناعي، أنظمة الري، البرجولات، إضاءة الحدائق والصيانة الدورية. اتصل الآن للحصول على استشارة مجانية." />
+    content="أفضل شركة تنسيق حدائق في الكويت. نقدم خدمات تصميم الحدائق، تركيب الثيل، شبكات ري، وزرع وتقليم وخلع وتكريب الأشجار والنخيل. اتصل الآن." />
   <meta name="keywords"
-    content="تنسيق حدائق الكويت, تصميم حدائق, عشب صناعي الكويت, أنظمة ري, برجولات, إضاءة حدائق, صيانة حدائق" />
+    content="تنسيق حدائق الكويت, تصميم حدائق, ثيل صناعي الكويت, ثيل طبيعي, عشب صناعي, شبكات ري, زرع أشجار, تكريب نخيل, تلقيح نخيل, خلع أشجار, برجولات, إضاءة حدائق, صيانة حدائق" />
   <meta name="author" content="Kuwait Green Oasis" />
   <meta name="robots" content="index, follow" />
 
@@ -38,8 +38,17 @@
       "@id": "https://example.com",
       "name": "كويتي جاردنز",
       "description": "شركة متخصصة في تنسيق وتصميم الحدائق في الكويت",
-      "url": "https://example.com",
+      "url": "https://kuwaitigardens.com",
       "telephone": "+965-66101619",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+965-66101619",
+          "contactType": "customer service",
+          "areaServed": "KW",
+          "availableLanguage": "Arabic"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "العنوان",
@@ -69,9 +78,28 @@
         "@type": "City",
         "name": "الكويت"
       },
-      "serviceType": ["تنسيق حدائق", "تصميم حدائق", "عشب صناعي", "أنظمة ري", "صيانة حدائق"]
+      "serviceType": ["تنسيق حدائق", "تصميم حدائق", "ثيل صناعي", "عشب طبيعي", "شبكات ري", "زرع أشجار ونخيل", "تكريب وتلقيح نخل", "خلع أشجار", "صيانة حدائق"]
     }
-    </script>
+  </script>
+
+  <!-- Google Sitelinks Search Box and WebSite Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "كويتي جاردنز",
+      "alternateName": "تنسيق حدائق بالكويت",
+      "url": "https://kuwaitigardens.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://kuwaitigardens.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
 </head>
 
 <body>

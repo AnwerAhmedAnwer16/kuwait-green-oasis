@@ -4,35 +4,45 @@ import { X } from "lucide-react";
 // [استبدل بصور مشاريعكم الحقيقية]
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-    alt: "تصميم حديقة منزلية في الكويت",
+    src: "/kg/gardens21.jpg",
+    alt: "تصميم حديقة منزلية متكاملة مع ثيل طبيعي في الكويت",
     category: "تصميم",
   },
   {
-    src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-    alt: "تركيب عشب صناعي الكويت",
-    category: "عشب صناعي",
+    src: "/kg/gardens1.jpg",
+    alt: "تركيب ثيل صناعي عالي الجودة في الكويت",
+    category: "ثيل صناعي",
   },
   {
-    src: "https://images.unsplash.com/photo-1564429238067-5f79bf6f3f23?w=600&q=80",
-    alt: "نظام ري ذكي للحدائق",
-    category: "أنظمة ري",
+    src: "/kg/gardens.jpg",
+    alt: "ممشى حجري مع الثيل وتصميم حديقة رائع",
+    category: "تصميم",
   },
   {
-    src: "https://images.unsplash.com/photo-1598902108854-10e335adac99?w=600&q=80",
-    alt: "برجولة خشبية حديثة",
+    src: "/kg/woody_setting.jpg",
+    alt: "برجولة خشبية حديثة مع جلسة خارجية في الكويت",
     category: "برجولات",
   },
   {
-    src: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80",
-    alt: "إضاءة حديقة ليلية",
+    src: "/kg/lightings.jpg",
+    alt: "إضاءة حديقة ليلية مع جلسة خارجية",
     category: "إضاءة",
   },
   {
-    src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-    alt: "صيانة حدائق الكويت",
+    src: "/kg/gardens2.jpg",
+    alt: "تركيب ثيل صناعي فاخر للحدائق",
+    category: "ثيل صناعي",
+  },
+  {
+    src: "/kg/gardens22.jpg",
+    alt: "صيانة حدائق وقص الثيل في الكويت",
     category: "صيانة",
   },
+  {
+    src: "/kg/483529366_17968829630839358_870485787341361304_n.webp",
+    alt: "تنسيق حديقة كبيرة مع أنظمة ري حديثة في الكويت",
+    category: "تنسيق حدائق",
+  }
 ];
 
 const ProjectGallery = () => {
