@@ -1,7 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-// [أضف آراء العملاء الحقيقية]
 const testimonials = [
   {
     name: "أحمد الخالدي",

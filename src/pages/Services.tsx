@@ -6,6 +6,7 @@ import {
   Palette, Leaf, Droplets, Tent, Lightbulb, Wrench,
   CheckCircle, ArrowLeft, TreePine, Scissors, Sprout
 } from "lucide-react";
+import { WHATSAPP_URL } from "@/config/site";
 
 // ── Real project photos from /public/kg ───────────────────────────────
 // Garden Design — full garden with palm trees + fountain, garden+pergola composite
@@ -308,7 +309,7 @@ const Services = () => {
                   {/* CTA */}
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                     <a
-                      href="https://wa.me/96566101619"
+                      href={WHATSAPP_URL()}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

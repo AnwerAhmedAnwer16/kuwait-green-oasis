@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Sparkles } from "lucide-react";
+import { WHATSAPP_URL } from "@/config/site";
 
 const HeroSection = () => {
   const scrollToServices = () => {
@@ -50,7 +51,7 @@ const HeroSection = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-6 text-lg"
             >
               <a
-                href="https://wa.me/96566101619"
+                href={WHATSAPP_URL()}
                 target="_blank"
                 rel="noopener noreferrer"
               >

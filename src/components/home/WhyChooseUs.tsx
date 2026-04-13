@@ -3,7 +3,7 @@ import { Award, Users, ShieldCheck, Clock, Banknote, ThumbsUp } from "lucide-rea
 const features = [
   {
     icon: Award,
-    title: "خبرة +10 سنوات", // [عدّل حسب خبرتكم]
+    title: "خبرة +10 سنوات",
     description: "خبرة طويلة في تنسيق الحدائق بالكويت",
   },
   {
@@ -45,7 +45,6 @@ const WhyChooseUs = () => {
               لماذا تختار كويتي جاردنز لتنسيق حديقتك؟
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              {/* [عدّل الوصف حسب شركتك] */}
               نحن نؤمن بأن كل حديقة تستحق أن تكون تحفة فنية. نجمع بين الخبرة الطويلة
               والتقنيات الحديثة لنقدم لك أفضل خدمات تنسيق الحدائق في الكويت.
             </p>
@@ -65,7 +64,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          {/* Image - [استبدل بصورة من مشاريعكم] */}
+          {/* Image */}
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img

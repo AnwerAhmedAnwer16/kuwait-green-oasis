@@ -89,10 +89,12 @@
   html {
     direction: rtl;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground font-cairo antialiased;
+    overflow-x: hidden;
   }
 
   /* Arabic Typography */

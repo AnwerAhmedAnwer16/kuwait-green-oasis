@@ -3,47 +3,115 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { WHATSAPP_URL } from "@/config/site";
 
 interface ContactFormProps {
   variant?: "default" | "compact";
   className?: string;
 }
 
+interface FormErrors {
+  name?: string;
+  phone?: string;
+  area?: string;
+}
+
 const ContactForm = ({ variant = "default", className = "" }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
 
-  const whatsappNumber = "96566101619";
+  const validate = (data: { name: string; phone: string; area: string }): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!data.name.trim()) {
+      newErrors.name = "الاسم مطلوب";
+    }
+
+    if (!data.phone.trim()) {
+      newErrors.phone = "رقم الهاتف مطلوب";
+    } else if (!/^[\d\s+\-()]{8,}$/.test(data.phone.trim())) {
+      newErrors.phone = "رقم هاتف غير صالح";
+    }
+
+    if (!data.area.trim()) {
+      newErrors.area = "المنطقة مطلوبة";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const phone = formData.get("phone") as string;
-    const area = formData.get("area") as string;
-    const details = formData.get("details") as string;
+    const name = (formData.get("name") as string).trim();
+    const phone = (formData.get("phone") as string).trim();
+    const area = (formData.get("area") as string).trim();
+    const details = (formData.get("details") as string).trim();
 
-    // Construct WhatsApp message
-    const message = `مرحباً، أنا ${name}
-📱 رقم الهاتف: ${phone}
-📍 المنطقة: ${area}
-📝 تفاصيل المشروع:
-${details}`;
+    if (!validate({ name, phone, area })) return;
 
-    // Open WhatsApp with pre-filled message
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    setIsSubmitting(true);
+
+    const message = `مرحباً، أنا ${name}\n📱 رقم الهاتف: ${phone}\n📍 المنطقة: ${area}\n📝 تفاصيل المشروع:\n${details}`;
+
+    const whatsappUrl = WHATSAPP_URL(message);
+    const newWindow = window.open(whatsappUrl, "_blank");
 
     setTimeout(() => {
-      window.open(whatsappUrl, "_blank");
       setIsSubmitting(false);
       setIsSubmitted(true);
 
-      // Reset after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000);
+      if (!newWindow || newWindow.closed || newWindow.closed === undefined) {
+        alert("يرجى السماح بفتح الواتساب للتواصل معنا");
+      }
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+        e.currentTarget.reset();
+      }, 3000);
     }, 500);
+  };
+
+  const renderInput = (
+    id: string,
+    label: string,
+    name: string,
+    type: string,
+    placeholder: string,
+    required?: boolean,
+    extra?: Record<string, unknown>,
+  ) => {
+    const error = errors[id as keyof FormErrors];
+    return (
+      <div className="space-y-2">
+        <Label htmlFor={id} className="text-foreground font-medium">
+          {label}
+          {required && <span className="text-destructive">*</span>}
+        </Label>
+        <Input
+          id={id}
+          name={name}
+          type={type}
+          required={required}
+          placeholder={placeholder}
+          className={`bg-background border-border focus:border-primary ${error ? "border-destructive" : ""}`}
+          dir={type === "tel" ? "ltr" : undefined}
+          aria-invalid={!!error}
+          aria-describedby={error ? `${id}-error` : undefined}
+          {...extra}
+        />
+        {error && (
+          <p id={`${id}-error`} className="text-destructive text-sm flex items-center gap-1" role="alert">
+            <AlertCircle className="w-4 h-4" />
+            {error}
+          </p>
+        )}
+      </div>
+    );
   };
 
   if (isSubmitted) {
@@ -57,51 +125,13 @@ ${details}`;
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
+    <form onSubmit={handleSubmit} className={`space-y-4 ${className}`} noValidate>
       <div className={variant === "compact" ? "grid grid-cols-1 md:grid-cols-2 gap-4" : "space-y-4"}>
-        <div className="space-y-2">
-          <Label htmlFor="name" className="text-foreground font-medium">
-            الاسم الكامل <span className="text-destructive">*</span>
-          </Label>
-          <Input
-            id="name"
-            name="name"
-            type="text"
-            required
-            placeholder="أدخل اسمك"
-            className="bg-background border-border focus:border-primary"
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="phone" className="text-foreground font-medium">
-            رقم الهاتف <span className="text-destructive">*</span>
-          </Label>
-          <Input
-            id="phone"
-            name="phone"
-            type="tel"
-            required
-            placeholder="+965 XXXX XXXX"
-            className="bg-background border-border focus:border-primary"
-            dir="ltr"
-          />
-        </div>
+        {renderInput("name", "الاسم الكامل", "name", "text", "أدخل اسمك", true)}
+        {renderInput("phone", "رقم الهاتف", "phone", "tel", "+965 XXXX XXXX", true)}
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="area" className="text-foreground font-medium">
-          المنطقة <span className="text-destructive">*</span>
-        </Label>
-        <Input
-          id="area"
-          name="area"
-          type="text"
-          required
-          placeholder="مثال: السالمية، حولي، الجهراء..."
-          className="bg-background border-border focus:border-primary"
-        />
-      </div>
+      {renderInput("area", "المنطقة", "area", "text", "مثال: السالمية، حولي، الجهراء...", true)}
 
       <div className="space-y-2">
         <Label htmlFor="details" className="text-foreground font-medium">

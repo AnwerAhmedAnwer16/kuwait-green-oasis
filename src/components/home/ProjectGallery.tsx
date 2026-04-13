@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { X } from "lucide-react";
 
-// [استبدل بصور مشاريعكم الحقيقية]
 const galleryImages = [
   {
     src: "/kg/gardens21.jpg",
@@ -42,11 +41,27 @@ const galleryImages = [
     src: "/kg/483529366_17968829630839358_870485787341361304_n.webp",
     alt: "تنسيق حديقة كبيرة مع أنظمة ري حديثة في الكويت",
     category: "تنسيق حدائق",
-  }
+  },
 ];
 
 const ProjectGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleClose = useCallback(() => setSelectedImage(null), []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleClose();
+    };
+    if (selectedImage) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selectedImage, handleClose]);
 
   return (
     <section className="section-padding bg-secondary">
@@ -68,7 +83,16 @@ const ProjectGallery = () => {
             <div
               key={index}
               className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow"
-              onClick={() => setSelectedImage(image.src.replace("w=600", "w=1200"))}
+              onClick={() => setSelectedImage(image.src)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedImage(image.src);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label={`عرض صورة: ${image.alt}`}
             >
               <img
                 src={image.src}
@@ -103,9 +127,12 @@ const ProjectGallery = () => {
         <div
           className="fixed inset-0 z-50 bg-foreground/95 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="عرض صورة مكبرة"
         >
           <button
-            className="absolute top-4 left-4 w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+            className="absolute top-4 left-4 w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors z-10"
             onClick={() => setSelectedImage(null)}
             aria-label="إغلاق"
           >
@@ -113,7 +140,7 @@ const ProjectGallery = () => {
           </button>
           <img
             src={selectedImage}
-            alt="صورة مكبرة"
+            alt="صورة مكبرة لمشروع من أعمال كويتي جاردنز"
             className="max-w-full max-h-[90vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
