@@ -1,35 +1,35 @@
-import { Award, Users, ShieldCheck, Clock, Banknote, ThumbsUp } from "lucide-react";
+import { Award, Users, ShieldCheck, Banknote, Clock, HardHat } from "lucide-react";
 
 const features = [
   {
     icon: Award,
-    title: "خبرة +10 سنوات",
-    description: "خبرة طويلة في تنسيق الحدائق بالكويت",
+    title: "فريق متخصص",
+    description: "مهندسون وفنيون محترفون في العزل المائي والحراري",
   },
   {
     icon: Users,
-    title: "فريق متخصص",
-    description: "مهندسون وفنيون محترفون في مجالهم",
+    title: "خبرة هندسية في الكويت",
+    description: "أكثر من 12 عاماً من الخبرة في مجال العزل",
   },
   {
     icon: ShieldCheck,
-    title: "ضمان على الأعمال",
-    description: "نوفر ضمان شامل على جميع خدماتنا",
+    title: "مواد معتمدة",
+    description: "نستخدم أجود المواد العالمية المعتمدة في العزل",
   },
   {
     icon: Banknote,
     title: "أسعار تنافسية",
-    description: "أفضل جودة بأسعار مناسبة للجميع",
+    description: "أفضل جودة بأسعار مناسبة للجميع مع ضمان شامل",
+  },
+  {
+    icon: HardHat,
+    title: "حلول مضمونة",
+    description: "تنفيذ احترافي وضمان على جميع أعمال العزل",
   },
   {
     icon: Clock,
     title: "التزام بالمواعيد",
-    description: "نلتزم بتسليم المشاريع في الوقت المحدد",
-  },
-  {
-    icon: ThumbsUp,
-    title: "رضا العملاء",
-    description: "عملاؤنا راضون بنسبة 100%",
+    description: "نلتزم بتسليم المشاريع في الوقت المحدد وبأعلى جودة",
   },
 ];
 
@@ -40,13 +40,13 @@ const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <span className="text-primary font-semibold text-lg mb-2 block">لماذا نحن</span>
+            <span className="text-accent font-semibold text-lg mb-2 block">لماذا نحن</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              لماذا تختار كويتي جاردنز لتنسيق حديقتك؟
+              لماذا تختار عوازل لخدمات العزل في الكويت؟
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              نحن نؤمن بأن كل حديقة تستحق أن تكون تحفة فنية. نجمع بين الخبرة الطويلة
-              والتقنيات الحديثة لنقدم لك أفضل خدمات تنسيق الحدائق في الكويت.
+              نحن شركة عوازل رائدة في الكويت متخصصة في العزل المائي والحراري. نقدم حلولاً هندسية
+              احترافية بمواد عالية الجودة لضمان حماية طويلة الأمد لمنشآتك من التسربات والرطوبة والحرارة.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -68,14 +68,14 @@ const WhyChooseUs = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/kg/gardens21.jpg"
-                alt="حديقة منزلية في الكويت - تنسيق حدائق احترافي كويتي جاردنز"
+                src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?w=800&q=80"
+                alt="مهندس متخصص في العزل المائي والحراري يخطط لأعمال العزل في الكويت - شركة عوازل"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-2xl -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-2xl -z-10" />
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full -z-10" />
           </div>
         </div>

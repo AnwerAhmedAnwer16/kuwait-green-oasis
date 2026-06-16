@@ -56,7 +56,7 @@ const ContactForm = ({ variant = "default", className = "" }: ContactFormProps) 
 
     setIsSubmitting(true);
 
-    const message = `مرحباً، أنا ${name}\n📱 رقم الهاتف: ${phone}\n📍 المنطقة: ${area}\n📝 تفاصيل المشروع:\n${details}`;
+    const message = `مرحباً، أنا ${name}\n📱 رقم الهاتف: ${phone}\n📍 المنطقة: ${area}\n📝 تفاصيل مشروع العزل:\n${details}`;
 
     const whatsappUrl = WHATSAPP_URL(message);
     const newWindow = window.open(whatsappUrl, "_blank");
@@ -135,13 +135,13 @@ const ContactForm = ({ variant = "default", className = "" }: ContactFormProps) 
 
       <div className="space-y-2">
         <Label htmlFor="details" className="text-foreground font-medium">
-          تفاصيل المشروع
+          تفاصيل مشروع العزل
         </Label>
         <Textarea
           id="details"
           name="details"
           rows={variant === "compact" ? 3 : 4}
-          placeholder="صف لنا مشروعك: نوع الخدمة المطلوبة، مساحة الحديقة، أي متطلبات خاصة..."
+          placeholder="صف لنا مشروع العزل: نوع الخدمة المطلوبة، مساحة السطح أو الحمام، أي متطلبات خاصة..."
           className="bg-background border-border focus:border-primary resize-none"
         />
       </div>
@@ -149,7 +149,7 @@ const ContactForm = ({ variant = "default", className = "" }: ContactFormProps) 
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-6 text-lg"
+        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold py-6 text-lg"
       >
         {isSubmitting ? (
           "جاري الإرسال..."

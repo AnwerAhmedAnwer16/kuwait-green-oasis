@@ -4,80 +4,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Kuwait Landscaping - Modern Green & White Design System
+/* عوازل - Industrial Blue, Gray & Orange Design System
+   Waterproofing & Thermal Insulation Company in Kuwait
    All colors in HSL format for theming support
 */
 
 @layer base {
   :root {
-    /* Modern Green & White Theme */
+    /* Industrial Blue & Gray Theme */
     --background: 0 0% 100%;
-    --foreground: 142 76% 16%;
+    --foreground: 215 60% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 142 76% 16%;
+    --card-foreground: 215 60% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 142 76% 16%;
+    --popover-foreground: 215 60% 15%;
 
-    /* Primary: Modern Green (#22C55E) */
-    --primary: 142 71% 45%;
+    /* Primary: Industrial Blue */
+    --primary: 215 85% 42%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Light green tint */
-    --secondary: 142 50% 95%;
-    --secondary-foreground: 142 76% 16%;
+    /* Secondary: Warm Gray */
+    --secondary: 30 20% 96%;
+    --secondary-foreground: 215 60% 15%;
 
-    --muted: 142 20% 96%;
-    --muted-foreground: 142 20% 40%;
+    --muted: 30 10% 94%;
+    --muted-foreground: 215 20% 45%;
 
-    /* Accent: Emerald highlight */
-    --accent: 142 71% 45%;
+    /* Accent: Orange */
+    --accent: 28 90% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 142 20% 90%;
-    --input: 142 20% 90%;
-    --ring: 142 71% 45%;
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 215 85% 42%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens for landscaping theme */
-    --emerald-dark: 142 76% 16%;
-    --emerald-light: 142 50% 95%;
-    --gold-accent: 45 93% 47%;
+    /* Custom tokens for عوازل theme */
+    --blue-dark: 215 70% 20%;
+    --blue-light: 215 50% 95%;
+    --orange-accent: 28 90% 55%;
   }
 
   .dark {
-    --background: 142 50% 5%;
-    --foreground: 142 20% 95%;
+    --background: 215 50% 6%;
+    --foreground: 215 20% 95%;
 
-    --card: 142 50% 8%;
-    --card-foreground: 142 20% 95%;
+    --card: 215 50% 8%;
+    --card-foreground: 215 20% 95%;
 
-    --popover: 142 50% 8%;
-    --popover-foreground: 142 20% 95%;
+    --popover: 215 50% 8%;
+    --popover-foreground: 215 20% 95%;
 
-    --primary: 142 71% 45%;
+    --primary: 215 85% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 30% 15%;
-    --secondary-foreground: 142 20% 95%;
+    --secondary: 215 30% 14%;
+    --secondary-foreground: 215 20% 95%;
 
-    --muted: 142 30% 15%;
-    --muted-foreground: 142 20% 65%;
+    --muted: 215 30% 14%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 142 71% 45%;
+    --accent: 28 90% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 142 30% 20%;
-    --input: 142 30% 20%;
-    --ring: 142 71% 45%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 215 85% 42%;
   }
 }
 
@@ -114,7 +115,7 @@
     background: linear-gradient(
       to bottom,
       hsl(var(--primary) / 0.9),
-      hsl(var(--emerald-dark) / 0.95)
+      hsl(var(--blue-dark) / 0.95)
     );
   }
 
@@ -130,7 +131,7 @@
 
   /* Text gradient */
   .text-gradient {
-    @apply bg-gradient-to-l from-primary to-emerald-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-l from-primary to-blue-800 bg-clip-text text-transparent;
   }
 
   /* Section padding consistency */

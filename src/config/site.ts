@@ -1,23 +1,23 @@
 export const SITE = {
-  name: "كويتي جاردنز",
+  name: "عوازل",
   url: "https://kuwaitigardens.com",
   logo: "/logo.png",
   description:
-    "كويتي جاردنز لخدمات الزراعة وتنسيق الحدائق. زرع وتوريد الأشجار والنخيل، تلقيح وتكريب نخيل، إزالة الأشجار، وتركيب الثيل الصناعي وأنظمة الري المتطورة في الكويت.",
+    "شركة عوازل لخدمات العزل المائي والحراري في الكويت. عزل الأسطح، عزل الحمامات، عزل المسابح، عزل الفوم (الرش الأمريكي)، العزل الفرنسي، والسكريد والصبة. حلول هندسية احترافية بمواد معتمدة.",
 };
 
 export const CONTACT = {
-  whatsappNumber: "96566101619",
-  phoneNumber: "+96566101619",
-  phoneHref: "tel:+96566101619",
-  whatsappMessage: "مرحباً، أرغب بالاستفسار عن خدمات تنسيق الحدائق",
-  area: "الكويت",
-  workingHours: "الأحد - الخميس: 8ص - 6م",
+  whatsappNumber: "96560786063",
+  phoneNumber: "+96560786063",
+  phoneHref: "tel:+96560786063",
+  whatsappMessage: "مرحباً، أرغب بالاستفسار عن خدمات العزل المائي والحراري",
+  area: "الكويت - جميع المناطق",
+  workingHours: "الأحد - الخميس: 8ص - 6م | الجمعة: 2م - 6م",
 };
 
 export const SOCIAL = {
-  instagram: "https://www.instagram.com/tnsyq231/",
-  snapchat: "https://www.snapchat.com/@abaas20265527?share_id=EekkXiGAUbU&locale=ar-KW",
+  instagram: "https://www.instagram.com/wzlshrkh",
+  snapchat: "https://www.snapchat.com/add/b_bd269233",
 };
 
 export const WHATSAPP_URL = (message?: string) =>

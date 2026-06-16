@@ -16,18 +16,19 @@ const Layout = ({ children }: LayoutProps) => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "كويتي جاردنز",
+            "name": "عوازل",
             "url": "https://kuwaitigardens.com",
             "logo": "https://kuwaitigardens.com/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+96566101619",
+              "telephone": "+96560786063",
               "contactType": "customer service",
               "areaServed": "KW",
               "availableLanguage": ["Arabic"]
             },
             "sameAs": [
-              "https://www.instagram.com/tnsyq231/"
+              "https://www.instagram.com/wzlshrkh",
+              "https://www.snapchat.com/add/b_bd269233"
             ]
           })}
         </script>

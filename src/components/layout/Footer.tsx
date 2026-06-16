@@ -11,11 +11,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="كويتي جاردنز" className="w-12 h-12 object-contain" />
-              <span className="font-bold text-xl">كويتي جاردنز</span>
+              <img src="/logo.png" alt="عوازل" className="w-14 h-14 object-contain flex-shrink-0" />
+              <div className="flex flex-col">
+                <span className="font-bold text-xl leading-tight">عوازل</span>
+                <span className="text-xs text-primary-foreground/60 leading-tight -mt-0.5">للخدمات الهندسية</span>
+              </div>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
-              خبراء تنسيق الحدائق في الكويت. نقدم خدمات تصميم وتنفيذ وصيانة الحدائق بأعلى جودة وأفضل الأسعار.
+              شركة متخصصة في العزل المائي والحراري في الكويت. نقدم حلولاً هندسية احترافية لعزل الأسطح والحمامات والمسابح والفوم والعزل الفرنسي والسكريد والصبة. فريق متخصص وخبرة هندسية في الكويت بمواد معتمدة.
             </p>
             {/* Social buttons stacked */}
             <div className="flex flex-col gap-2">
@@ -73,71 +76,61 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">خدماتنا</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/services#garden-design" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  تصميم الحدائق
+                <Link to="/services#roof" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  عزل الأسطح
                 </Link>
               </li>
               <li>
-                <Link to="/services#artificial-grass" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  الثيل الصناعي
+                <Link to="/services#bathroom" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  عزل الحمامات
                 </Link>
               </li>
               <li>
-                <Link to="/services#irrigation" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  شبكات الري
+                <Link to="/services#pool" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  عزل المسابح
                 </Link>
               </li>
               <li>
-                <Link to="/services#pergolas" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  البرجولات والجلسات
+                <Link to="/services#foam" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  عزل الفوم (الرش الأمريكي)
                 </Link>
               </li>
               <li>
-                <Link to="/services#lighting" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  إضاءة الحدائق
+                <Link to="/services#french" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  العزل الفرنسي
                 </Link>
               </li>
               <li>
-                <Link to="/services#maintenance" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  الصيانة الدورية
+                <Link to="/services#screed" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  السكريد والصبة
                 </Link>
               </li>
               <li>
-                <Link to="/services#planting" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  زرع الأشجار والنخيل
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#palm-care" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  تلقيح وتكريب النخيل
-                </Link>
-              </li>
-              <li>
-                <Link to="/services#tree-removal" className="text-primary-foreground/80 hover:text-primary transition-colors">
-                  خلع وإزالة الأشجار
+                <Link to="/services#duct" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  عزل دكتات التكييف
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info - [أضف بيانات التواصل] */}
+          {/* Contact Info */}
           <div>
             <h3 className="font-bold text-lg mb-4">تواصل معنا</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <a href={CONTACT.phoneHref} className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  <a href={CONTACT.phoneHref} className="text-primary-foreground/80 hover:text-accent transition-colors">
                     {CONTACT.phoneNumber}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <span className="text-primary-foreground/80">{CONTACT.area}</span>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <span className="text-primary-foreground/80">{CONTACT.workingHours}</span>
               </li>
             </ul>
@@ -147,7 +140,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60">
-            © {new Date().getFullYear()} كويتي جاردنز. جميع الحقوق محفوظة.
+            © {new Date().getFullYear()} عوازل. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>

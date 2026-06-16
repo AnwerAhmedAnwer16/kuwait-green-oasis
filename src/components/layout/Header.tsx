@@ -23,8 +23,8 @@ const Header = () => {
           <Link to="/" className="flex-shrink-0">
             <img
               src="/logo.png"
-              alt="شعار كويتي جاردنز"
-              className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              alt="شعار عوازل"
+              className="w-14 h-14 md:w-18 md:h-18 object-contain"
             />
           </Link>
 

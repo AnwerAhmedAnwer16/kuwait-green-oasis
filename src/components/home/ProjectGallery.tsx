@@ -3,44 +3,44 @@ import { X } from "lucide-react";
 
 const galleryImages = [
   {
-    src: "/kg/gardens21.jpg",
-    alt: "تصميم حديقة منزلية متكاملة مع ثيل طبيعي في الكويت",
-    category: "تصميم",
+    src: "https://images.unsplash.com/photo-1635424709845-3a85ad5e1f5e?w=800&q=80",
+    alt: "عزل الأسطح في الكويت - أعمال عزل مائي احترافية للأسطح باستخدام مواد متطورة",
+    category: "عزل أسطح",
   },
   {
-    src: "/kg/gardens1.jpg",
-    alt: "تركيب ثيل صناعي عالي الجودة في الكويت",
-    category: "ثيل صناعي",
+    src: "https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=800&q=80",
+    alt: "عزل الحمامات ضد تسربات المياه والرطوبة في الكويت - طبقات عازلة عالية الجودة",
+    category: "عزل حمامات",
   },
   {
-    src: "/kg/gardens.jpg",
-    alt: "ممشى حجري مع الثيل وتصميم حديقة رائع",
-    category: "تصميم",
+    src: "https://images.unsplash.com/photo-1591645321243-3adc1e75cfdc?w=800&q=80",
+    alt: "أعمال العزل المائي للمسابح والخزانات في المباني الحديثة بالكويت - حماية متكاملة",
+    category: "عزل مسابح",
   },
   {
-    src: "/kg/woody_setting.jpg",
-    alt: "برجولة خشبية حديثة مع جلسة خارجية في الكويت",
-    category: "برجولات",
+    src: "https://images.unsplash.com/photo-1543525324-dc2c9006d03d?w=800&q=80",
+    alt: "عزل الفوم بالرش الأمريكي للمباني في الكويت - عزل حراري ومائي بتقنية الفوم",
+    category: "عزل فوم",
   },
   {
-    src: "/kg/lightings.jpg",
-    alt: "إضاءة حديقة ليلية مع جلسة خارجية",
-    category: "إضاءة",
+    src: "https://images.unsplash.com/photo-1744217725753-3fe4a7801645?w=800&q=80",
+    alt: "نظام العزل الفرنسي لمعالجة الرطوبة الأرضية وحماية الأساسات في الكويت",
+    category: "عزل فرنسي",
   },
   {
-    src: "/kg/gardens2.jpg",
-    alt: "تركيب ثيل صناعي فاخر للحدائق",
-    category: "ثيل صناعي",
+    src: "https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?w=800&q=80",
+    alt: "أعمال السكريد والصبة الخرسانية تحضيراً لتطبيق العزل المائي والحراري في الكويت",
+    category: "سكريد وصبة",
   },
   {
-    src: "/kg/gardens22.jpg",
-    alt: "صيانة حدائق وقص الثيل في الكويت",
-    category: "صيانة",
+    src: "https://images.unsplash.com/photo-1598346653523-10a11538b971?w=800&q=80",
+    alt: "معالجة الرطوبة والعفن في المباني السكنية باستخدام مواد عازلة ضد الرطوبة في الكويت",
+    category: "معالجة رطوبة",
   },
   {
-    src: "/kg/483529366_17968829630839358_870485787341361304_n.webp",
-    alt: "تنسيق حديقة كبيرة مع أنظمة ري حديثة في الكويت",
-    category: "تنسيق حدائق",
+    src: "https://images.unsplash.com/photo-1615309662243-70f6df917b59?w=800&q=80",
+    alt: "عزل دكتات التكييف والتمديدات الحرارية - حماية من فقدان التبريد في مباني الكويت",
+    category: "عزل دكتات",
   },
 ];
 
@@ -68,12 +68,12 @@ const ProjectGallery = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-lg mb-2 block">أعمالنا</span>
+          <span className="text-accent font-semibold text-lg mb-2 block">أعمالنا</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            معرض أعمالنا في تنسيق الحدائق بالكويت
+            معرض أعمال العزل المائي والحراري في الكويت
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            اطلع على مجموعة من أحدث مشاريعنا في تنسيق الحدائق بالكويت
+            اطلع على مجموعة من أحدث مشاريعنا في العزل بجميع مناطق الكويت
           </p>
         </div>
 
@@ -102,7 +102,7 @@ const ProjectGallery = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 right-4">
-                  <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
                     {image.category}
                   </span>
                 </div>
@@ -114,10 +114,10 @@ const ProjectGallery = () => {
         {/* View More Link */}
         <div className="text-center mt-8">
           <a
-            href="/services#portfolio"
-            className="inline-flex items-center text-primary font-bold hover:underline"
+            href="/services"
+            className="inline-flex items-center text-accent font-bold hover:underline"
           >
-            عرض جميع المشاريع
+            عرض جميع الخدمات
           </a>
         </div>
       </div>
@@ -140,7 +140,7 @@ const ProjectGallery = () => {
           </button>
           <img
             src={selectedImage}
-            alt="صورة مكبرة لمشروع من أعمال كويتي جاردنز"
+            alt="صورة مكبرة لمشروع من أعمال عوازل"
             className="max-w-full max-h-[90vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />

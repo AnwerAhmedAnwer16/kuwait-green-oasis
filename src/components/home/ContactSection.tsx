@@ -1,5 +1,6 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { CONTACT } from "@/config/site";
 
 const ContactSection = () => {
   return (
@@ -7,12 +8,12 @@ const ContactSection = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-lg mb-2 block">تواصل معنا</span>
+          <span className="text-accent font-semibold text-lg mb-2 block">تواصل معنا</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            احصل على استشارة مجانية
+            احصل على معاينة مجانية وعرض سعر
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            أرسل لنا تفاصيل مشروعك وسنتواصل معك في أقرب وقت
+            أرسل لنا تفاصيل مشروع العزل الخاص بك وسنتواصل معك في أقرب وقت
           </p>
         </div>
 
@@ -22,19 +23,19 @@ const ContactSection = () => {
             {/* Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <Phone className="w-8 h-8 text-primary mb-3" />
+                <Phone className="w-8 h-8 text-accent mb-3" />
                 <h3 className="font-bold text-foreground mb-1">اتصل بنا</h3>
-                <a href="tel:+96566101619" className="text-muted-foreground hover:text-primary">
-                  +965 66101619
+                <a href={CONTACT.phoneHref} className="text-muted-foreground hover:text-accent">
+                  {CONTACT.phoneNumber}
                 </a>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <MapPin className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold text-foreground mb-1">العنوان</h3>
-                <p className="text-muted-foreground">الكويت</p>
+                <MapPin className="w-8 h-8 text-accent mb-3" />
+                <h3 className="font-bold text-foreground mb-1">المنطقة</h3>
+                <p className="text-muted-foreground">جميع مناطق الكويت</p>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <Clock className="w-8 h-8 text-primary mb-3" />
+                <Clock className="w-8 h-8 text-accent mb-3" />
                 <h3 className="font-bold text-foreground mb-1">أوقات العمل</h3>
                 <p className="text-muted-foreground">الأحد - الخميس: 8ص - 6م</p>
               </div>
@@ -57,7 +58,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="bg-background rounded-2xl p-6 md:p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-foreground mb-6">أرسل طلبك</h3>
+            <h3 className="text-xl font-bold text-foreground mb-6">اطلب عرض سعر</h3>
             <ContactForm />
           </div>
         </div>

@@ -3,223 +3,152 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import {
-  Palette, Leaf, Droplets, Tent, Lightbulb, Wrench,
-  CheckCircle, ArrowLeft, TreePine, Scissors, Sprout
+  Building2, Bath, Waves, SprayCanIcon as Spray, Triangle, Layers, Fan,
+  CheckCircle, ArrowLeft, ShieldCheck, HardHat, Droplets, Thermometer
 } from "lucide-react";
 import { WHATSAPP_URL } from "@/config/site";
-
-// ── Real project photos from /public/kg ───────────────────────────────
-// Garden Design — full garden with palm trees + fountain, garden+pergola composite
-const IMG_DESIGN_1 = "/kg/gardens21.jpg";   // Kuwaiti villa garden with palm trees
-const IMG_DESIGN_2 = "/kg/gardens.jpg";     // Garden design with pergola + stepping stones
-
-// Artificial Grass — real grass installations
-const IMG_GRASS_1 = "/kg/gardens2.jpg";    // Wall-to-wall professional green turf
-const IMG_GRASS_2 = "/kg/gardens1.jpg";    // Artificial grass + outdoor deck
-
-// Irrigation — reuse garden shots showing irrigated lawns
-const IMG_IRRIG_1 = "/kg/483529366_17968829630839358_870485787341361304_n.webp"; // large lawn showing irrigation coverage
-const IMG_IRRIG_2 = "/kg/gardens21.jpg";   // well-irrigated garden with fountain
-
-// Pergolas / Outdoor Seating — actual project pergolas
-const IMG_PERG_1 = "/kg/woody_setting.jpg";  // wooden pergola seating area
-const IMG_PERG_2 = "/kg/lightings.jpg";       // bamboo pergola with warm lights
-
-// Lighting — pergola with warm ambient lighting
-const IMG_LIGHT_1 = "/kg/lightings.jpg";   // bamboo pergola + warm garden lights
-const IMG_LIGHT_2 = "/kg/gardens222.jpg";  // wooden pergola with wall lights
-
-// Maintenance — well-maintained lawns from our projects
-const IMG_MAINT_1 = "/kg/gardens22.jpg";   // artificial grass maintained entrance
-const IMG_MAINT_2 = "/kg/gardens2.jpg";    // pristine green turf maintenance
-
-// Trees & Palms
-const IMG_PLANT_1 = "/kg/gardens21.jpg";
-const IMG_PLANT_2 = "/kg/gardens.jpg";
-
-const IMG_PALM_1 = "/kg/gardens4.jpg";
-const IMG_PALM_2 = "/kg/gardens21.jpg";
-
-const IMG_REMOVE_1 = "/kg/gardens.jpg"; // Utilizing generic appropriate visuals for tree related text where explicit removal isn't present
-const IMG_REMOVE_2 = "/kg/gardens22.jpg";
 
 // Services data with full details
 const services = [
   {
-    id: "garden-design",
-    icon: Palette,
-    title: "تصميم الحدائق",
-    subtitle: "تصميم ثلاثي الأبعاد احترافي",
-    description: "نقدم خدمة تصميم الحدائق بأحدث البرامج ثلاثية الأبعاد. نساعدك على تصور حديقتك قبل التنفيذ مع مراعاة الذوق الشخصي والميزانية والمساحة المتاحة.",
+    id: "roof",
+    icon: Building2,
+    title: "عزل الأسطح",
+    subtitle: "حماية كاملة من التسربات الحرارية والمائية",
+    description: "نقدم خدمة عزل الأسطح بمواد عالية الجودة تحمي منزلك من تسربات المياه والحرارة. نستخدم أحدث تقنيات العزل المائي والحراري لضمان حماية طويلة الأمد لسطح المبني. فريقنا المتخصص ينفذ العزل باحترافية وفق أعلى المعايير الهندسية.",
     benefits: [
-      "تصميم 3D واقعي لتصور النتيجة النهائية",
-      "اختيار النباتات المناسبة لمناخ الكويت",
-      "تخطيط المساحات والممرات بشكل عملي",
-      "مراعاة الخصوصية والإطلالات",
+      "حماية من تسربات الأمطار والمياه",
+      "عزل حراري يخفض درجة الحرارة حتى 8 درجات",
+      "مواد عازلة معتمدة دولياً وطويلة العمر",
+      "ضمان شامل على أعمال العزل",
     ],
     process: [
-      { step: 1, title: "المعاينة", desc: "زيارة الموقع وأخذ القياسات" },
-      { step: 2, title: "التصميم", desc: "إعداد التصميم ثلاثي الأبعاد" },
-      { step: 3, title: "المراجعة", desc: "التعديلات حسب ملاحظاتكم" },
-      { step: 4, title: "التنفيذ", desc: "البدء بتنفيذ المشروع" },
+      { step: 1, title: "المعاينة", desc: "زيارة الموقع وتقييم السطح" },
+      { step: 2, title: "التجهيز", desc: "تنظيف السطح وتجهيزه للعزل" },
+      { step: 3, title: "العزل", desc: "تطبيق طبقات العزل المائي والحراري" },
+      { step: 4, title: "الفحص", desc: "اختبار جودة العزل والتسليم" },
     ],
-    images: [IMG_DESIGN_1, IMG_DESIGN_2],
+    images: ["https://images.unsplash.com/photo-1635424709845-3a85ad5e1f5e?w=800&q=80", "https://images.unsplash.com/photo-1635424824800-692767998d07?w=800&q=80"],
   },
   {
-    id: "artificial-grass",
-    icon: Leaf,
-    title: "الثيل الصناعي والطبيعي",
-    subtitle: "ثيل عالي الجودة يتحمل الحرارة",
-    description: "نوفر أفضل أنواع الثيل (العشب) الصناعي المقاوم للحرارة والأشعة فوق البنفسجية. ثيل يدوم لسنوات طويلة مع ضمان شامل.",
+    id: "bathroom",
+    icon: Bath,
+    title: "عزل الحمامات",
+    subtitle: "عزل مائي متكامل للحمامات ضد الرطوبة",
+    description: "نوفر خدمة عزل الحمامات المتكامل لحماية الجدران والأرضيات من تسربات المياه والرطوبة. نستخدم مواد عازلة مرنة وعالية الجودة تضمن عدم تسرب المياه للطوابق السفلية. تنفيذ احترافي مع ضمان شامل.",
     benefits: [
-      "مقاوم لحرارة الكويت الشديدة",
-      "لا يحتاج ماء أو صيانة دورية",
-      "آمن للأطفال والحيوانات الأليفة",
-      "ضمان حتى 10 سنوات",
+      "حماية من تسربات المياه للجدران والأرضيات",
+      "منع ظهور الرطوبة والعفن في الحمامات",
+      "مواد عازلة مرنة تتحمل التمدد والانكماش",
+      "ضمان ضد عيوب العزل لمدة تصل إلى 10 سنوات",
     ],
     process: [
-      { step: 1, title: "القياس", desc: "قياس المساحة بدقة" },
-      { step: 2, title: "التحضير", desc: "تجهيز الأرضية وتسويتها" },
-      { step: 3, title: "التركيب", desc: "تركيب الثيل بإتقان" },
-      { step: 4, title: "التسليم", desc: "فحص الجودة والتسليم" },
+      { step: 1, title: "الفحص", desc: "فحص الحمام وتحديد نقاط العزل" },
+      { step: 2, title: "التجهيز", desc: "تجهيز الأرضية والجدران" },
+      { step: 3, title: "العزل", desc: "تطبيق طبقات العزل المائي" },
+      { step: 4, title: "الاختبار", desc: "اختبار العزل بالماء والتسليم" },
     ],
-    images: [IMG_GRASS_1, IMG_GRASS_2],
+    images: ["https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=800&q=80", "https://images.unsplash.com/photo-1587527901949-ab0341697c1e?w=800&q=80"],
   },
   {
-    id: "irrigation",
-    icon: Droplets,
-    title: "شبكات الري",
-    subtitle: "شبكات ري (عادي وأتوماتيك) توفر الماء",
-    description: "نركب أحدث شبكات الري العادية والأتوماتيكية بالتنقيط والرش. شبكات موفرة للماء مع تحكم آلي وجدولة زمنية.",
+    id: "pool",
+    icon: Waves,
+    title: "عزل المسابح",
+    subtitle: "عزل احترافي للمسابح والخزانات",
+    description: "نقدم خدمة عزل المسابح والخزانات بمواد عازلة متخصصة تضمن عدم تسرب المياه والحفاظ على جودة المياه. نستخدم أحدث أنظمة العزل المرنة التي تتحمل الضغط والتمدد مع ضمان طويل الأمد.",
     benefits: [
-      "توفير حتى 70% من استهلاك الماء",
-      "تحكم آلي عبر التطبيق",
-      "أنظمة تنقيط ورش متنوعة",
-      "صيانة دورية وقطع غيار متوفرة",
+      "عزل كامل ضد تسرب المياه من المسبح",
+      "حماية هيكل المسبح من التشققات والتآكل",
+      "مواد عازلة آمنة وصديقة للبيئة",
+      "ضمان طويل الأمد على أعمال العزل",
     ],
     process: [
-      { step: 1, title: "الدراسة", desc: "دراسة احتياجات النباتات" },
-      { step: 2, title: "التصميم", desc: "تصميم شبكة الري" },
-      { step: 3, title: "التمديد", desc: "تمديد الأنابيب والرشاشات" },
-      { step: 4, title: "البرمجة", desc: "برمجة نظام التحكم" },
+      { step: 1, title: "المعاينة", desc: "فحص المسبح وتقييم حالته" },
+      { step: 2, title: "التجهيز", desc: "تنظيف السطح وتجهيزه" },
+      { step: 3, title: "العزل", desc: "تطبيق طبقات العزل المتعددة" },
+      { step: 4, title: "الاختبار", desc: "ملء المسبح واختبار العزل" },
     ],
-    images: [IMG_IRRIG_1, IMG_IRRIG_2],
+    images: ["https://images.unsplash.com/photo-1591645321243-3adc1e75cfdc?w=800&q=80", "https://images.unsplash.com/photo-1608093754564-5cd7922674fe?w=800&q=80"],
   },
   {
-    id: "pergolas",
-    icon: Tent,
-    title: "البرجولات والجلسات",
-    subtitle: "جلسات خارجية فاخرة",
-    description: "نصمم وننفذ برجولات وجلسات خارجية بتصاميم عصرية. خشب طبيعي أو صناعي مقاوم للعوامل الجوية.",
+    id: "foam",
+    icon: Spray,
+    title: "عزل الفوم (الرش الأمريكي)",
+    subtitle: "عزل حراري بالفوم الصناعي بتقنية الرش",
+    description: "نقدم خدمة عزل الفوم بالرش الأمريكي باستخدام أحدث معدات الرش. الفوم الصناعي يعزل حرارياً ومائياً بشكل مثالي، ويستخدم لعزل الأسطح والخزانات والدكتات. يتميز بخفة وزنه وقوته العازلة الفائقة.",
     benefits: [
-      "تصاميم حصرية ومخصصة",
-      "خامات عالية الجودة",
-      "مقاومة للحرارة والرطوبة",
-      "إضافة أنظمة تبريد وإضاءة",
+      "عزل حراري ممتاز يخفض استهلاك الطاقة حتى 40%",
+      "عزل مائي كامل بدون فواصل أو لحامات",
+      "يلتصق بجميع الأسطح ويغطي الفراغات",
+      "خفيف الوزن ولا يسبب أحمالاً على الأسطح",
     ],
     process: [
-      { step: 1, title: "التصميم", desc: "اختيار التصميم المناسب" },
-      { step: 2, title: "الخامات", desc: "اختيار نوع الخشب" },
-      { step: 3, title: "التصنيع", desc: "تصنيع القطع بدقة" },
-      { step: 4, title: "التركيب", desc: "التركيب في الموقع" },
+      { step: 1, title: "المعاينة", desc: "تقييم السطح وقياس المساحة" },
+      { step: 2, title: "التجهيز", desc: "تجهيز السطح ومعدات الرش" },
+      { step: 3, title: "الرش", desc: "رش الفوم بتقنية أمريكية" },
+      { step: 4, title: "التسوية", desc: "تسوية السطح وفحص الجودة" },
     ],
-    images: [IMG_PERG_1, IMG_PERG_2],
+    images: ["https://images.unsplash.com/photo-1543525324-dc2c9006d03d?w=800&q=80", "https://images.unsplash.com/photo-1674485190969-4347f72aad0e?w=800&q=80"],
   },
   {
-    id: "lighting",
-    icon: Lightbulb,
-    title: "إضاءة الحدائق",
-    subtitle: "إضاءة LED وشمسية",
-    description: "نوفر حلول إضاءة متنوعة للحدائق. من الإضاءة الشمسية الموفرة إلى أنظمة LED الذكية مع تحكم عن بعد.",
+    id: "french",
+    icon: Triangle,
+    title: "العزل الفرنسي",
+    subtitle: "نظام عزل فرنسي متكامل لمعالجة الرطوبة",
+    description: "نظام العزل الفرنسي هو حل متكامل لمعالجة مشاكل الرطوبة الأرضية وحماية الأساسات. يشمل النظام تركيب مواسير تصريف حول المبنى مع طبقات عازلة لمنع تسرب المياه الجوفية للجدران والأساسات.",
     benefits: [
-      "إضاءة LED موفرة للطاقة",
-      "أنظمة شمسية لا تحتاج كهرباء",
-      "تحكم عن بعد وألوان متعددة",
-      "إبراز جمال الحديقة ليلاً",
+      "حماية الأساسات من المياه الجوفية",
+      "معالجة الرطوبة الأرضية نهائياً",
+      "نظام تصريف متكامل حول المبنى",
+      "حل دائم لمشاكل الرطوبة والعفن",
     ],
     process: [
-      { step: 1, title: "المعاينة", desc: "دراسة نقاط الإضاءة" },
-      { step: 2, title: "التخطيط", desc: "تخطيط توزيع الإضاءة" },
-      { step: 3, title: "التمديد", desc: "تمديد الأسلاك الكهربائية" },
-      { step: 4, title: "التركيب", desc: "تركيب وحدات الإضاءة" },
+      { step: 1, title: "الدراسة", desc: "دراسة حالة التربة والرطوبة" },
+      { step: 2, title: "الحفر", desc: "حفر حول المبنى للوصول للأساس" },
+      { step: 3, title: "العزل", desc: "تركيب العازل ومواسير التصريف" },
+      { step: 4, title: "الردم", desc: "ردم التربة وإعادة التأهيل" },
     ],
-    images: [IMG_LIGHT_1, IMG_LIGHT_2],
+    images: ["https://images.unsplash.com/photo-1744217725753-3fe4a7801645?w=800&q=80", "https://images.unsplash.com/photo-1685464197644-41d9b07e1e73?w=800&q=80"],
   },
   {
-    id: "maintenance",
-    icon: Wrench,
-    title: "الصيانة الدورية",
-    subtitle: "باقات صيانة شهرية",
-    description: "نقدم باقات صيانة شهرية شاملة للحفاظ على جمال حديقتك. قص الثيل، تقليم الأشجار، ومراقبة أنظمة الري.",
+    id: "screed",
+    icon: Layers,
+    title: "السكريد والصبة",
+    subtitle: "تحضير الأرضيات للعزل باحترافية",
+    description: "نقدم خدمات السكريد والصبة كخطوة أساسية قبل تطبيق العزل. ننفذ طبقات التسوية والصبة الخرسانية بأعلى جودة لضمان سطح مثالي للعزل. نستخدم خلطات خرسانية مدروسة تناسب مختلف أنواع العزل.",
     benefits: [
-      "زيارات دورية منتظمة",
-      "قص وتشذيب النباتات",
-      "فحص وصيانة أنظمة الري",
+      "تسوية الأرضيات تحضيراً للعزل",
+      "صبة خرسانية متينة وقوية",
+      "ضمان جودة التنفيذ حسب المواصفات",
+      "إعداد مثالي لطبقات العزل اللاحقة",
     ],
     process: [
-      { step: 1, title: "التقييم", desc: "تقييم حالة الحديقة" },
-      { step: 2, title: "الباقة", desc: "اختيار باقة الصيانة" },
-      { step: 3, title: "الجدولة", desc: "جدولة الزيارات الدورية" },
-      { step: 4, title: "التنفيذ", desc: "تنفيذ أعمال الصيانة" },
+      { step: 1, title: "المعاينة", desc: "قياس المساحة وتحديد المستويات" },
+      { step: 2, title: "التجهيز", desc: "تنظيف السطح وتجهيز الخلطة" },
+      { step: 3, title: "الصب", desc: "صب الخرسانة وتسويتها" },
+      { step: 4, title: "المعالجة", desc: "معالجة الخرسانة والتجفيف" },
     ],
-    images: [IMG_MAINT_1, IMG_MAINT_2],
+    images: ["https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?w=800&q=80", "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80"],
   },
   {
-    id: "planting",
-    icon: Sprout,
-    title: "زرع الأشجار والنخيل",
-    subtitle: "مجموعة متنوعة تتناسب مع مناخ الكويت",
-    description: "نقدم خدمة توريد وزراعة كافة أنواع الأشجار والنخيل التي تتناسب مع درجات الحرارة والبيئة في الكويت. نضمن أفضل الأنواع الجاهزة للنمو والإثمار.",
+    id: "duct",
+    icon: Fan,
+    title: "عزل دكتات التكييف",
+    subtitle: "عزل حراري لدكتات التكييف لتوفير الطاقة",
+    description: "نقدم خدمة عزل دكتات التكييف لمنع فقدان التبريد وتوفير استهلاك الطاقة. نستخدم مواد عازلة للحرارة عالية الجودة تغلف مجاري الهواء بالكامل. يضمن العزل وصول التبريد بكفاءة لجميع الغرف.",
     benefits: [
-      "توريد أشجار ونخيل خالية من الأمراض",
-      "زراعة بطرق علمية تضمن نمو الجذور السليم",
-      "توفير بيئة تربة مناسبة وغنية بالمعادن",
+      "منع فقدان التبريد في مجاري الهواء",
+      "خفض استهلاك الكهرباء حتى 25%",
+      "منع تكاثف الماء على الدكتات",
+      "إطالة عمر نظام التكييف",
     ],
     process: [
-      { step: 1, title: "الاختيار", desc: "اختيار الأشجار المناسبة للمساحة والجو" },
-      { step: 2, title: "التجهيز", desc: "تجهيز حفر الزراعة والتربة" },
-      { step: 3, title: "الزراعة", desc: "عملية الزراعة والتثبيت السليم" },
-      { step: 4, title: "المتابعة", desc: "الري الأولي والمتابعة للمناعة" },
+      { step: 1, title: "الفحص", desc: "فحص الدكتات ونظام التكييف" },
+      { step: 2, title: "التجهيز", desc: "تنظيف الدكتات وتجهيزها" },
+      { step: 3, title: "العزل", desc: "تغليف الدكتات بالمادة العازلة" },
+      { step: 4, title: "الفحص", desc: "فحص جودة العزل والتسليم" },
     ],
-    images: [IMG_PLANT_1, IMG_PLANT_2],
-  },
-  {
-    id: "palm-care",
-    icon: TreePine,
-    title: "تلقيح وتكريب النخيل",
-    subtitle: "لزيادة الإنتاج والمحافظة على النخلة",
-    description: "خدمات احترافية في العناية بالنخلة من مرحلة التلقيح (التنبيت) وحتى مرحلة التكريب (قص السعف اليابس وتكريب الجذع) لضمان بيئة نظيفة وثمار بجودة عالية.",
-    benefits: [
-      "تلقيح دقيق لضمان محصول وفي ومثمر",
-      "تكريب وتخليص النخلة من السعف الميت والآفات",
-      "تحسين المنظر الجمالي لجذع النخلة",
-    ],
-    process: [
-      { step: 1, title: "الفحص", desc: "فحص حالة النخلة والطلع" },
-      { step: 2, title: "التلقيح", desc: "عملية التلقيح في الوقت المناسب" },
-      { step: 3, title: "التكريب", desc: "قص السعف الجاف وتكريب الجذع" },
-      { step: 4, title: "التنظيف", desc: "إزالة المخلفات من الموقع" },
-    ],
-    images: [IMG_PALM_1, IMG_PALM_2],
-  },
-  {
-    id: "tree-removal",
-    icon: Scissors,
-    title: "خلع وإزالة الأشجار",
-    subtitle: "إزالة احترافية وآمنة للأشجار",
-    description: "إزالة וخلع الأشجار الميتة أو التي تتسبب بأضرار للمبنى والجدران بطرق آمنة ومدروسة دون التأثير على البيئة المحيطة أو التمديدات.",
-    benefits: [
-      "معدات متخصصة وآمنة لخلع الأشجار",
-      "دقة في العمل وتجنب التسبب بأضرار",
-      "تقطيع الشجرة وتخليص الموقع من المخلفات",
-    ],
-    process: [
-      { step: 1, title: "التقييم", desc: "تقييم الشجرة والمكان المحيط" },
-      { step: 2, title: "التقطيع", desc: "التدرج في الإزالة والتقطيع" },
-      { step: 3, title: "الخلع", desc: "خلع الجذور العميقة بأمان" },
-      { step: 4, title: "التنظيف", desc: "تسوية الأرضية وتنقيتها" },
-    ],
-    images: [IMG_REMOVE_1, IMG_REMOVE_2],
+    images: ["https://images.unsplash.com/photo-1615309662243-70f6df917b59?w=800&q=80", "https://images.unsplash.com/photo-1707596830261-9c6138a6dd3b?w=800&q=80"],
   },
 ];
 
@@ -227,18 +156,18 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>خدماتنا | تنسيق حدائق، ثيل صناعي، وبرجولات - كويتي جاردنز</title>
+        <title>خدمات العزل المائي والحراري | عزل أسطح وحمامات وفوم - عوازل الكويت</title>
         <meta
           name="description"
-          content="استعرض خدمات كويتي جاردنز المتكاملة: تصميم لاندسكيب، تركيب ثيل صناعي وطبيعي، شبكات ري، وزرع أشجار وتكريب وتلقيح النخيل وخلع الأشجار في الكويت."
+          content="استعرض خدمات شركة عوازل المتكاملة: عزل الأسطح، عزل الحمامات، عزل المسابح، عزل الفوم بالرش الأمريكي، العزل الفرنسي، السكريد والصبة، وعزل دكتات التكييف في الكويت."
         />
         <meta
           name="keywords"
-          content="خدمات تنسيق حدائق, تركيب ثيل صناعي الكويت, تصميم لاندسكيب, شبكات ري عادي وأتوماتيك, زرع أشجار الكويت, تلقيح نخيل, تكريب نخيل, تنظيف نخل, خلع أشجار, إزالة أشجار, صيانة حدائق منزلية"
+          content="خدمات عزل الكويت, عزل أسطح الكويت, عزل حمامات الكويت, عزل مسابح, عزل فوم رش أمريكي, عزل فرنسي, سكريد وصبة, عزل دكتات تكييف, معالجة رطوبة الكويت, شركة عوازل"
         />
-        <meta property="og:title" content="خدماتنا | تنسيق حدائق، ثيل صناعي، شبكات ري، وزرع وتكريب النخيل - كويتي جاردنز" />
-        <meta property="og:description" content="استعرض خدمات كويتي جاردنز المتكاملة: تصميم لاندسكيب، تركيب ثيل صناعي وطبيعي، شبكات ري (عادي وأتوماتيك)، وزرع وتكريب النخيل وإزالة الأشجار." />
-        <meta property="og:image" content="/kg/gardens21.jpg" />
+        <meta property="og:title" content="خدمات العزل المائي والحراري | عزل أسطح وحمامات وفوم - عوازل الكويت" />
+        <meta property="og:description" content="استعرض خدمات شركة عوازل المتكاملة للعزل المائي والحراري في الكويت: عزل الأسطح والحمامات والمسابح والفوم والعزل الفرنسي." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1723124280643-f883fd318ce5?w=1200&q=80" />
         <meta property="og:url" content="https://kuwaitigardens.com/services" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -250,10 +179,10 @@ const Services = () => {
         <section className="bg-foreground py-20 px-4">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              خدمات تنسيق وتصميم الحدائق المتكاملة
+              حلول العزل المائي والحراري المتكاملة في الكويت
             </h1>
             <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              نقدم حلولاً متكاملة لتنسيق الحدائق في الكويت بأعلى معايير الجودة
+              نقدم حلولاً هندسية احترافية للعزل بمواد معتمدة وفريق متخصص في جميع مناطق الكويت
             </p>
           </div>
         </section>
@@ -275,7 +204,7 @@ const Services = () => {
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-foreground">{service.title}</h2>
-                      <h3 className="text-primary font-medium">{service.subtitle}</h3>
+                      <h3 className="text-accent font-medium">{service.subtitle}</h3>
                     </div>
                   </div>
 
@@ -287,7 +216,7 @@ const Services = () => {
                   <div className="space-y-3 mb-8">
                     {service.benefits.map((benefit, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                         <span className="text-foreground">{benefit}</span>
                       </div>
                     ))}
@@ -297,7 +226,7 @@ const Services = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     {service.process.map((step) => (
                       <div key={step.step} className="text-center">
-                        <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center mx-auto mb-2">
+                        <div className="w-10 h-10 rounded-full bg-accent text-accent-foreground font-bold flex items-center justify-center mx-auto mb-2">
                           {step.step}
                         </div>
                         <p className="font-bold text-foreground text-sm">{step.title}</p>
@@ -307,7 +236,7 @@ const Services = () => {
                   </div>
 
                   {/* CTA */}
-                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                     <a
                       href={WHATSAPP_URL()}
                       target="_blank"
@@ -328,7 +257,7 @@ const Services = () => {
                     >
                       <img
                         src={img}
-                        alt={`${service.title} في الكويت - مشروع كويتي جاردنز ${i + 1}`}
+                        alt={`${service.title} في الكويت - شركة عوازل ${i + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -344,10 +273,10 @@ const Services = () => {
         <section className="section-padding bg-primary">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              جاهز لتحويل حديقتك؟
+              جاهز لعزل منزلك أو منشأتك؟
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              احصل على استشارة مجانية وعرض سعر مفصل لمشروعك
+              احصل على معاينة مجانية وعرض سعر مفصل لمشروع العزل الخاص بك
             </p>
             <div className="max-w-md mx-auto bg-background rounded-2xl p-6">
               <ContactForm variant="compact" />

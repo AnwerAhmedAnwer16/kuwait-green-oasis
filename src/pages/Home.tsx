@@ -12,24 +12,24 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>كويتي جاردنز | أفضل شركة تنسيق وتصميم حدائق في الكويت</title>
+        <title>عوازل | أفضل شركة عزل مائي وحراري في الكويت - عزل الأسطح والحمامات والفوم</title>
         <meta
           name="description"
-          content="كويتي جاردنز لخدمات الزراعة وتنسيق الحدائق. زرع وتوريد الأشجار والنخيل، تلقيح وتكريب ნخيل، إزالة الأشجار، وتركيب الثيل الصناعي وأنظمة الري المتطورة في الكويت."
+          content="شركة عوازل لخدمات العزل المائي والحراري في الكويت. عزل الأسطح، عزل الحمامات، عزل المسابح، عزل الفوم (الرش الأمريكي)، العزل الفرنسي، والسكريد والصبة. حلول هندسية بمواد معتمدة."
         />
         <meta
           name="keywords"
-          content="تنسيق حدائق الكويت, تصميم حدائق, ثيل صناعي الكويت, ثيل طبيعي, عشب صناعي, أنظمة ري, زرع أشجار الكويت, تلقيح نخيل, تكريب نخيل, خلع أشجار, إزالة أشجار, برجولات, إضاءة حدائق, صيانة حدائق, كويتي جاردنز"
+          content="عزل الكويت, عزل مائي الكويت, عزل حراري الكويت, عزل الأسطح, عزل الحمامات, عزل المسابح, عزل الفوم, الرش الأمريكي, العزل الفرنسي, السكريد والصبة, عزل دكتات التكييف, شركة عوازل الكويت, معالجة الرطوبة, مقاومة تسرب المياه, waterproofing Kuwait, insulation contractor Kuwait, roof leakage repair Kuwait, spray foam Kuwait"
         />
-        <meta property="og:title" content="كويتي جاردنز | أفضل شركة تنسيق وتصميم حدائق في الكويت" />
-        <meta property="og:description" content="كويتي جاردنز لخدمات الزراعة وتنسيق الحدائق. زرع وتوريد الأشجار والنخيل، تلقيح وتكريب نخيل، وإزالة الأشجار في الكويت بالإضافة لتركيب الثيل والري." />
-        <meta property="og:image" content="/kg/gardens4.jpg" />
+        <meta property="og:title" content="عوازل | أفضل شركة عزل مائي وحراري في الكويت" />
+        <meta property="og:description" content="شركة عوازل لخدمات العزل المائي والحراري في الكويت. عزل الأسطح والحمامات والمسابح والفوم والعزل الفرنسي." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1723124280643-f883fd318ce5?w=1200&q=80" />
         <meta property="og:url" content="https://kuwaitigardens.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="كويتي جاردنز | أفضل شركة تنسيق وتصميم حدائق في الكويت" />
-        <meta name="twitter:description" content="كويتي جاردنز لخدمات الزراعة وتنسيق الحدائق. زرع أشجار وتكريب نخيل وخلع أشجار وتركيب ثيل في الكويت." />
-        <meta name="twitter:image" content="/kg/gardens4.jpg" />
+        <meta name="twitter:title" content="عوازل | أفضل شركة عزل مائي وحراري في الكويت" />
+        <meta name="twitter:description" content="شركة عوازل - خدمات العزل المائي والحراري في الكويت. عزل أسطح وحمامات ومسابح وفوم." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1723124280643-f883fd318ce5?w=1200&q=80" />
         <link rel="canonical" href="https://kuwaitigardens.com" />
       </Helmet>
 
